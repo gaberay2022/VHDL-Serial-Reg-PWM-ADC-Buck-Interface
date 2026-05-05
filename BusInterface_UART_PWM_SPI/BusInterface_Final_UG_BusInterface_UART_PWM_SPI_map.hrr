@@ -1,0 +1,332 @@
+---------------------------------------------------
+Report for cell Bus_Interface_Top
+   Instance path: Bus_Interface_Top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	    2166.00        100.0
+                                  LUT4	    1975.00        100.0
+                               DISTRAM	     768.00        100.0
+                                 IOBUF	         17        100.0
+                                PFUREG	       1702        100.0
+                                RIPPLE	        390        100.0
+                                   EBR	          3        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    Std_Counter(8)_U18	          1         0.2
+          RS232_Usr_Int(9600,24930000)	          1        20.2
+                               PLL_Clk	          1         0.0
+                               PI_Buck	          1         7.3
+                              LED_Ctrl	          1         8.7
+                            Bus_Master	          1        46.7
+                               ADC_Int	          1        16.5
+---------------------------------------------------
+Report for cell PI_Buck
+   Instance path: Bus_Interface_Top/PI_Buck1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     157.92         7.3
+                                  LUT4	     162.00         8.2
+                                PFUREG	        256        15.0
+                                RIPPLE	         81        20.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                     Std_Counter(8)_U1	          1         0.2
+                       Std_Counter(16)	          1         0.4
+                     Bus_Int(16,16)_U2	          1         1.5
+---------------------------------------------------
+Report for cell Std_Counter(8)_U1
+   Instance path: Bus_Interface_Top/PI_Buck1/Delay_Cnt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.00         0.2
+                                PFUREG	          8         0.5
+                                RIPPLE	          5         1.3
+---------------------------------------------------
+Report for cell Bus_Int(16,16)_U2
+   Instance path: Bus_Interface_Top/PI_Buck1/Bus_Int1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      31.83         1.5
+                                  LUT4	      64.00         3.2
+                                PFUREG	         41         2.4
+---------------------------------------------------
+Report for cell Std_Counter(16)
+   Instance path: Bus_Interface_Top/PI_Buck1/Bus_Cnt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       9.00         0.4
+                                PFUREG	         16         0.9
+                                RIPPLE	          9         2.3
+---------------------------------------------------
+Report for cell ADC_Int
+   Instance path: Bus_Interface_Top/ADC_Int1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     357.87        16.5
+                                  LUT4	     249.00        12.6
+                                PFUREG	        764        44.9
+                                RIPPLE	        111        28.5
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    Std_Counter(8)_U13	          1         0.2
+                    Std_Counter(8)_U14	          1         0.2
+                    Std_Counter(8)_U17	          1         0.3
+                    Std_Counter(8)_U10	          1         0.2
+                   Std_Counter(16)_U11	          1         0.4
+                   Std_Counter(16)_U16	          1         0.5
+                   Std_Counter(16)_U12	          1         0.5
+                            Sreg_SP_16	          1         0.5
+                            Sreg_PS_16	          1         0.3
+                               SPI_ROM	          1         0.0
+                    Bus_Int(16,16)_U15	          1         0.5
+---------------------------------------------------
+Report for cell Std_Counter(8)_U10
+   Instance path: Bus_Interface_Top/ADC_Int1/Setup_Cnt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.00         0.2
+                                PFUREG	          8         0.5
+                                RIPPLE	          5         1.3
+---------------------------------------------------
+Report for cell Sreg_SP_16
+   Instance path: Bus_Interface_Top/ADC_Int1/SPI_SP
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      10.33         0.5
+                                  LUT4	       4.00         0.2
+                                PFUREG	         30         1.8
+---------------------------------------------------
+Report for cell SPI_ROM
+   Instance path: Bus_Interface_Top/ADC_Int1/SPI_ROM1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.45         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell Sreg_PS_16
+   Instance path: Bus_Interface_Top/ADC_Int1/SPI_PS
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.62         0.3
+                                  LUT4	       5.00         0.3
+                                PFUREG	         17         1.0
+---------------------------------------------------
+Report for cell Std_Counter(16)_U11
+   Instance path: Bus_Interface_Top/ADC_Int1/SPI_Loop_Cnt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       9.00         0.4
+                                PFUREG	         16         0.9
+                                RIPPLE	          9         2.3
+---------------------------------------------------
+Report for cell Std_Counter(16)_U12
+   Instance path: Bus_Interface_Top/ADC_Int1/SPI_Cnt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      11.75         0.5
+                                  LUT4	      11.00         0.6
+                                PFUREG	         16         0.9
+                                RIPPLE	          9         2.3
+---------------------------------------------------
+Report for cell Std_Counter(8)_U13
+   Instance path: Bus_Interface_Top/ADC_Int1/Prg_Cnt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.00         0.2
+                                PFUREG	          8         0.5
+                                RIPPLE	          5         1.3
+---------------------------------------------------
+Report for cell Std_Counter(8)_U14
+   Instance path: Bus_Interface_Top/ADC_Int1/Mem_Cnt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.00         0.2
+                                PFUREG	          8         0.5
+                                RIPPLE	          5         1.3
+---------------------------------------------------
+Report for cell Bus_Int(16,16)_U15
+   Instance path: Bus_Interface_Top/ADC_Int1/Bus_Int1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      11.00         0.5
+                                  LUT4	       3.00         0.2
+                                PFUREG	         23         1.4
+---------------------------------------------------
+Report for cell Std_Counter(16)_U16
+   Instance path: Bus_Interface_Top/ADC_Int1/Bus_Cnt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       9.75         0.5
+                                  LUT4	       3.00         0.2
+                                PFUREG	         16         0.9
+                                RIPPLE	          9         2.3
+---------------------------------------------------
+Report for cell Std_Counter(8)_U17
+   Instance path: Bus_Interface_Top/ADC_Int1/Ave_Cnt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       6.33         0.3
+                                  LUT4	       5.00         0.3
+                                PFUREG	          8         0.5
+                                RIPPLE	          5         1.3
+---------------------------------------------------
+Report for cell PLL_Clk
+   Instance path: Bus_Interface_Top/PLL_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell RS232_Usr_Int(9600,24930000)
+   Instance path: Bus_Interface_Top/RS232_Usr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     438.08        20.2
+                                  LUT4	     659.00        33.4
+                                PFUREG	        367        21.6
+                                RIPPLE	        107        27.4
+                                   EBR	          3        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                        Std_Counter(8)	          1         0.3
+                  STD_FIFO(8,512,9)_U0	          1         1.5
+                     STD_FIFO(8,512,9)	          1         1.6
+                        Bus_Int(16,16)	          1         0.8
+---------------------------------------------------
+Report for cell STD_FIFO(8,512,9)
+   Instance path: Bus_Interface_Top/RS232_Usr/STD_FIFO_W
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      33.75         1.6
+                                  LUT4	      24.00         1.2
+                                PFUREG	         55         3.2
+                                RIPPLE	         16         4.1
+                                   EBR	          1        33.3
+---------------------------------------------------
+Report for cell STD_FIFO(8,512,9)_U0
+   Instance path: Bus_Interface_Top/RS232_Usr/STD_FIFO_R
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      32.25         1.5
+                                  LUT4	      27.00         1.4
+                                PFUREG	         56         3.3
+                                RIPPLE	         16         4.1
+                                   EBR	          1        33.3
+---------------------------------------------------
+Report for cell Std_Counter(8)
+   Instance path: Bus_Interface_Top/RS232_Usr/Rcv_Cnt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       6.08         0.3
+                                  LUT4	       2.67         0.1
+                                PFUREG	          8         0.5
+                                RIPPLE	          5         1.3
+---------------------------------------------------
+Report for cell Bus_Int(16,16)
+   Instance path: Bus_Interface_Top/RS232_Usr/Bus_Int1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      17.67         0.8
+                                  LUT4	      21.00         1.1
+                                PFUREG	         47         2.8
+---------------------------------------------------
+Report for cell Std_Counter(8)_U18
+   Instance path: Bus_Interface_Top/Reset_Cnt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.00         0.2
+                                PFUREG	          8         0.5
+                                RIPPLE	          5         1.3
+---------------------------------------------------
+Report for cell Bus_Master
+   Instance path: Bus_Interface_Top/BM
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	    1011.13        46.7
+                                  LUT4	     682.00        34.5
+                               DISTRAM	     768.00        100.0
+                                PFUREG	         66         3.9
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                 SPRAM	          1        46.0
+---------------------------------------------------
+Report for cell SPRAM
+   Instance path: Bus_Interface_Top/BM/Mem1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     995.47        46.0
+                                  LUT4	     672.00        34.0
+                               DISTRAM	     768.00        100.0
+                                PFUREG	         16         0.9
+---------------------------------------------------
+Report for cell LED_Ctrl
+   Instance path: Bus_Interface_Top/LED_Ctrll
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     187.75         8.7
+                                  LUT4	     203.00        10.3
+                                PFUREG	        238        14.0
+                                RIPPLE	         86        22.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                     Std_Counter(8)_U7	          1         0.2
+                    Std_Counter(16)_U4	          1         0.4
+                    Std_Counter(16)_U6	          1         0.4
+                    Std_Counter(16)_U9	          1         0.4
+                    Std_Counter(16)_U5	          1         0.4
+                    Std_Counter(16)_U3	          1         0.4
+                     Bus_Int(16,16)_U8	          1         0.4
+---------------------------------------------------
+Report for cell Std_Counter(16)_U3
+   Instance path: Bus_Interface_Top/LED_Ctrll/PWM4_Cnt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       9.00         0.4
+                                PFUREG	         16         0.9
+                                RIPPLE	          9         2.3
+---------------------------------------------------
+Report for cell Std_Counter(16)_U4
+   Instance path: Bus_Interface_Top/LED_Ctrll/PWM3_Cnt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       9.00         0.4
+                                PFUREG	         16         0.9
+                                RIPPLE	          9         2.3
+---------------------------------------------------
+Report for cell Std_Counter(16)_U5
+   Instance path: Bus_Interface_Top/LED_Ctrll/PWM2_Cnt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       9.00         0.4
+                                PFUREG	         16         0.9
+                                RIPPLE	          9         2.3
+---------------------------------------------------
+Report for cell Std_Counter(16)_U6
+   Instance path: Bus_Interface_Top/LED_Ctrll/PWM1_Cnt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       9.00         0.4
+                                PFUREG	         16         0.9
+                                RIPPLE	          9         2.3
+---------------------------------------------------
+Report for cell Std_Counter(8)_U7
+   Instance path: Bus_Interface_Top/LED_Ctrll/Delay_Cnt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.00         0.2
+                                PFUREG	          8         0.5
+                                RIPPLE	          5         1.3
+---------------------------------------------------
+Report for cell Bus_Int(16,16)_U8
+   Instance path: Bus_Interface_Top/LED_Ctrll/Bus_Int1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       8.58         0.4
+                                  LUT4	       8.00         0.4
+                                PFUREG	         24         1.4
+---------------------------------------------------
+Report for cell Std_Counter(16)_U9
+   Instance path: Bus_Interface_Top/LED_Ctrll/Bus_Cnt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       9.00         0.4
+                                PFUREG	         16         0.9
+                                RIPPLE	          9         2.3

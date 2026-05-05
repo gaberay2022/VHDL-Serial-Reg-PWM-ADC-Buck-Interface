@@ -1,0 +1,483 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Tue May 05 14:54:24 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     Bus_Interface_Top
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk2 [get_nets clk]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 11.158ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \RS232_Usr/Rcv_Cnt/temp__i3  (from clk +)
+   Destination:    FD1P3AX    D              \RS232_Usr/Chk_Sum_reg_o_i0_i7  (to clk +)
+
+   Delay:                  16.025ns  (39.3% logic, 60.7% route), 17 logic levels.
+
+ Constraint Details:
+
+     16.025ns data_path \RS232_Usr/Rcv_Cnt/temp__i3 to \RS232_Usr/Chk_Sum_reg_o_i0_i7 violates
+      5.000ns delay constraint less
+      0.133ns L_S requirement (totaling 4.867ns) by 11.158ns
+
+ Path Details: \RS232_Usr/Rcv_Cnt/temp__i3 to \RS232_Usr/Chk_Sum_reg_o_i0_i7
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \RS232_Usr/Rcv_Cnt/temp__i3 (from clk)
+Route        12   e 1.196                                  \RS232_Usr/RAM_address_7__N_826[4]
+LUT4        ---     0.408              A to Z              \RS232_Usr/Rcv_Cnt_Out_7__I_0_i7_2_lut_rep_460
+Route         1   e 0.660                                  \RS232_Usr/n26869
+LUT4        ---     0.408              B to Z              \RS232_Usr/i18885_4_lut
+Route         1   e 0.660                                  \RS232_Usr/n24320
+LUT4        ---     0.408              D to Z              \RS232_Usr/i20810_4_lut
+Route         1   e 0.020                                  \RS232_Usr/n24331
+MOFX0       ---     0.313             C0 to Z              \RS232_Usr/Rcv_Cnt_Out_7__I_0_i16
+Route         1   e 0.660                                  \RS232_Usr/LD_Chk_Sum_N_943
+LUT4        ---     0.408              D to Z              \RS232_Usr/i1_3_lut_4_lut_adj_141
+Route         1   e 0.020                                  \RS232_Usr/n23069
+MUXL5       ---     0.193           ALUT to Z              \RS232_Usr/i18581
+Route         1   e 0.660                                  \RS232_Usr/n24015
+LUT4        ---     0.408              A to Z              \RS232_Usr/i18583_3_lut
+Route        22   e 1.279                                  \RS232_Usr/LD_Chk_Sum
+LUT4        ---     0.408              B to Z              \RS232_Usr/i1_4_lut_adj_90
+Route         8   e 1.075                                  \RS232_Usr/n6275
+MOFX0       ---     0.313             C0 to Z              \RS232_Usr/mux_2741_i2
+Route         1   e 0.660                                  \RS232_Usr/n6942
+LUT4        ---     0.408              B to Z              \RS232_Usr/i4550_3_lut
+Route         2   e 0.798                                  \RS232_Usr/n9592
+LUT4        ---     0.408              C to Z              \RS232_Usr/i9554_3_lut_4_lut
+Route         1   e 0.660                                  \RS232_Usr/n14596
+A1_TO_FCO   ---     0.684           C[2] to COUT           \RS232_Usr/add_2920_3
+Route         1   e 0.020                                  \RS232_Usr/n20794
+FCI_TO_FCO  ---     0.130            CIN to COUT           \RS232_Usr/add_2920_5
+Route         1   e 0.020                                  \RS232_Usr/n20795
+FCI_TO_FCO  ---     0.130            CIN to COUT           \RS232_Usr/add_2920_7
+Route         1   e 0.020                                  \RS232_Usr/n20796
+FCI_TO_F    ---     0.495            CIN to S[2]           \RS232_Usr/add_2920_9
+Route         1   e 0.660                                  \RS232_Usr/n6128
+LUT4        ---     0.408              D to Z              \RS232_Usr/mux_2530_i8_3_lut_4_lut
+Route         1   e 0.660                                  \RS232_Usr/n6094
+                  --------
+                   16.025  (39.3% logic, 60.7% route), 17 logic levels.
+
+
+Error:  The following path violates requirements by 11.158ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \RS232_Usr/Rcv_Cnt/temp__i3  (from clk +)
+   Destination:    FD1P3AX    D              \RS232_Usr/Chk_Sum_reg_o_i0_i6  (to clk +)
+
+   Delay:                  16.025ns  (39.3% logic, 60.7% route), 17 logic levels.
+
+ Constraint Details:
+
+     16.025ns data_path \RS232_Usr/Rcv_Cnt/temp__i3 to \RS232_Usr/Chk_Sum_reg_o_i0_i6 violates
+      5.000ns delay constraint less
+      0.133ns L_S requirement (totaling 4.867ns) by 11.158ns
+
+ Path Details: \RS232_Usr/Rcv_Cnt/temp__i3 to \RS232_Usr/Chk_Sum_reg_o_i0_i6
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \RS232_Usr/Rcv_Cnt/temp__i3 (from clk)
+Route        12   e 1.196                                  \RS232_Usr/RAM_address_7__N_826[4]
+LUT4        ---     0.408              A to Z              \RS232_Usr/Rcv_Cnt_Out_7__I_0_i7_2_lut_rep_460
+Route         1   e 0.660                                  \RS232_Usr/n26869
+LUT4        ---     0.408              B to Z              \RS232_Usr/i18885_4_lut
+Route         1   e 0.660                                  \RS232_Usr/n24320
+LUT4        ---     0.408              D to Z              \RS232_Usr/i20810_4_lut
+Route         1   e 0.020                                  \RS232_Usr/n24331
+MOFX0       ---     0.313             C0 to Z              \RS232_Usr/Rcv_Cnt_Out_7__I_0_i16
+Route         1   e 0.660                                  \RS232_Usr/LD_Chk_Sum_N_943
+LUT4        ---     0.408              D to Z              \RS232_Usr/i1_3_lut_4_lut_adj_141
+Route         1   e 0.020                                  \RS232_Usr/n23069
+MUXL5       ---     0.193           ALUT to Z              \RS232_Usr/i18581
+Route         1   e 0.660                                  \RS232_Usr/n24015
+LUT4        ---     0.408              A to Z              \RS232_Usr/i18583_3_lut
+Route        22   e 1.279                                  \RS232_Usr/LD_Chk_Sum
+LUT4        ---     0.408              B to Z              \RS232_Usr/i1_4_lut_adj_90
+Route         8   e 1.075                                  \RS232_Usr/n6275
+MOFX0       ---     0.313             C0 to Z              \RS232_Usr/mux_2741_i2
+Route         1   e 0.660                                  \RS232_Usr/n6942
+LUT4        ---     0.408              B to Z              \RS232_Usr/i4550_3_lut
+Route         2   e 0.798                                  \RS232_Usr/n9592
+LUT4        ---     0.408              C to Z              \RS232_Usr/i9554_3_lut_4_lut
+Route         1   e 0.660                                  \RS232_Usr/n14596
+A1_TO_FCO   ---     0.684           C[2] to COUT           \RS232_Usr/add_2920_3
+Route         1   e 0.020                                  \RS232_Usr/n20794
+FCI_TO_FCO  ---     0.130            CIN to COUT           \RS232_Usr/add_2920_5
+Route         1   e 0.020                                  \RS232_Usr/n20795
+FCI_TO_FCO  ---     0.130            CIN to COUT           \RS232_Usr/add_2920_7
+Route         1   e 0.020                                  \RS232_Usr/n20796
+FCI_TO_F    ---     0.495            CIN to S[2]           \RS232_Usr/add_2920_9
+Route         1   e 0.660                                  \RS232_Usr/n6129
+LUT4        ---     0.408              D to Z              \RS232_Usr/mux_2530_i7_3_lut_4_lut
+Route         1   e 0.660                                  \RS232_Usr/n6095
+                  --------
+                   16.025  (39.3% logic, 60.7% route), 17 logic levels.
+
+
+Error:  The following path violates requirements by 11.158ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \RS232_Usr/Rcv_Cnt/temp__i4  (from clk +)
+   Destination:    FD1P3AX    D              \RS232_Usr/Chk_Sum_reg_o_i0_i7  (to clk +)
+
+   Delay:                  16.025ns  (39.3% logic, 60.7% route), 17 logic levels.
+
+ Constraint Details:
+
+     16.025ns data_path \RS232_Usr/Rcv_Cnt/temp__i4 to \RS232_Usr/Chk_Sum_reg_o_i0_i7 violates
+      5.000ns delay constraint less
+      0.133ns L_S requirement (totaling 4.867ns) by 11.158ns
+
+ Path Details: \RS232_Usr/Rcv_Cnt/temp__i4 to \RS232_Usr/Chk_Sum_reg_o_i0_i7
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \RS232_Usr/Rcv_Cnt/temp__i4 (from clk)
+Route        12   e 1.196                                  \RS232_Usr/RAM_address_7__N_826[5]
+LUT4        ---     0.408              A to Z              \RS232_Usr/Rcv_Cnt_Out_7__I_0_i9_2_lut_rep_461
+Route         1   e 0.660                                  \RS232_Usr/n26870
+LUT4        ---     0.408              A to Z              \RS232_Usr/i18885_4_lut
+Route         1   e 0.660                                  \RS232_Usr/n24320
+LUT4        ---     0.408              D to Z              \RS232_Usr/i20810_4_lut
+Route         1   e 0.020                                  \RS232_Usr/n24331
+MOFX0       ---     0.313             C0 to Z              \RS232_Usr/Rcv_Cnt_Out_7__I_0_i16
+Route         1   e 0.660                                  \RS232_Usr/LD_Chk_Sum_N_943
+LUT4        ---     0.408              D to Z              \RS232_Usr/i1_3_lut_4_lut_adj_141
+Route         1   e 0.020                                  \RS232_Usr/n23069
+MUXL5       ---     0.193           ALUT to Z              \RS232_Usr/i18581
+Route         1   e 0.660                                  \RS232_Usr/n24015
+LUT4        ---     0.408              A to Z              \RS232_Usr/i18583_3_lut
+Route        22   e 1.279                                  \RS232_Usr/LD_Chk_Sum
+LUT4        ---     0.408              B to Z              \RS232_Usr/i1_4_lut_adj_90
+Route         8   e 1.075                                  \RS232_Usr/n6275
+MOFX0       ---     0.313             C0 to Z              \RS232_Usr/mux_2741_i2
+Route         1   e 0.660                                  \RS232_Usr/n6942
+LUT4        ---     0.408              B to Z              \RS232_Usr/i4550_3_lut
+Route         2   e 0.798                                  \RS232_Usr/n9592
+LUT4        ---     0.408              C to Z              \RS232_Usr/i9554_3_lut_4_lut
+Route         1   e 0.660                                  \RS232_Usr/n14596
+A1_TO_FCO   ---     0.684           C[2] to COUT           \RS232_Usr/add_2920_3
+Route         1   e 0.020                                  \RS232_Usr/n20794
+FCI_TO_FCO  ---     0.130            CIN to COUT           \RS232_Usr/add_2920_5
+Route         1   e 0.020                                  \RS232_Usr/n20795
+FCI_TO_FCO  ---     0.130            CIN to COUT           \RS232_Usr/add_2920_7
+Route         1   e 0.020                                  \RS232_Usr/n20796
+FCI_TO_F    ---     0.495            CIN to S[2]           \RS232_Usr/add_2920_9
+Route         1   e 0.660                                  \RS232_Usr/n6128
+LUT4        ---     0.408              D to Z              \RS232_Usr/mux_2530_i8_3_lut_4_lut
+Route         1   e 0.660                                  \RS232_Usr/n6094
+                  --------
+                   16.025  (39.3% logic, 60.7% route), 17 logic levels.
+
+Warning: 16.158 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets OSC_Out]
+            79 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 1.353ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \Reset_Cnt/temp__i0  (from OSC_Out +)
+   Destination:    FD1P3IX    D              \Reset_Cnt/temp__i7  (to OSC_Out +)
+
+   Delay:                   3.514ns  (55.1% logic, 44.9% route), 6 logic levels.
+
+ Constraint Details:
+
+      3.514ns data_path \Reset_Cnt/temp__i0 to \Reset_Cnt/temp__i7 meets
+      5.000ns delay constraint less
+      0.133ns L_S requirement (totaling 4.867ns) by 1.353ns
+
+ Path Details: \Reset_Cnt/temp__i0 to \Reset_Cnt/temp__i7
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \Reset_Cnt/temp__i0 (from OSC_Out)
+Route         2   e 0.838                                  Reset_Cnt_Out[0]
+A1_TO_FCO   ---     0.684           A[2] to COUT           \Reset_Cnt/add_4_1
+Route         1   e 0.020                                  \Reset_Cnt/n20682
+FCI_TO_FCO  ---     0.130            CIN to COUT           \Reset_Cnt/add_4_3
+Route         1   e 0.020                                  \Reset_Cnt/n20683
+FCI_TO_FCO  ---     0.130            CIN to COUT           \Reset_Cnt/add_4_5
+Route         1   e 0.020                                  \Reset_Cnt/n20684
+FCI_TO_FCO  ---     0.130            CIN to COUT           \Reset_Cnt/add_4_7
+Route         1   e 0.020                                  \Reset_Cnt/n20685
+FCI_TO_F    ---     0.495            CIN to S[2]           \Reset_Cnt/add_4_9
+Route         1   e 0.660                                  \Reset_Cnt/n5
+                  --------
+                    3.514  (55.1% logic, 44.9% route), 6 logic levels.
+
+
+Passed:  The following path meets requirements by 1.388ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \Reset_Cnt/temp__i0  (from OSC_Out +)
+   Destination:    FD1S3AX    D              System_rst_20  (to OSC_Out +)
+
+   Delay:                   3.479ns  (34.0% logic, 66.0% route), 3 logic levels.
+
+ Constraint Details:
+
+      3.479ns data_path \Reset_Cnt/temp__i0 to System_rst_20 meets
+      5.000ns delay constraint less
+      0.133ns L_S requirement (totaling 4.867ns) by 1.388ns
+
+ Path Details: \Reset_Cnt/temp__i0 to System_rst_20
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \Reset_Cnt/temp__i0 (from OSC_Out)
+Route         2   e 0.838                                  Reset_Cnt_Out[0]
+LUT4        ---     0.408              C to Z              i5_4_lut
+Route         2   e 0.798                                  n12
+LUT4        ---     0.408              C to Z              i12691_4_lut_rep_411
+Route         1   e 0.660                                  n26820
+                  --------
+                    3.479  (34.0% logic, 66.0% route), 3 logic levels.
+
+
+Passed:  The following path meets requirements by 1.388ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \Reset_Cnt/temp__i0  (from OSC_Out +)
+   Destination:    FD1S3AX    D              Reset_Cnt_INC_21  (to OSC_Out +)
+
+   Delay:                   3.479ns  (34.0% logic, 66.0% route), 3 logic levels.
+
+ Constraint Details:
+
+      3.479ns data_path \Reset_Cnt/temp__i0 to Reset_Cnt_INC_21 meets
+      5.000ns delay constraint less
+      0.133ns L_S requirement (totaling 4.867ns) by 1.388ns
+
+ Path Details: \Reset_Cnt/temp__i0 to Reset_Cnt_INC_21
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \Reset_Cnt/temp__i0 (from OSC_Out)
+Route         2   e 0.838                                  Reset_Cnt_Out[0]
+LUT4        ---     0.408              C to Z              i5_4_lut
+Route         2   e 0.798                                  n12
+LUT4        ---     0.408              C to Z              i12692_1_lut_4_lut
+Route         1   e 0.660                                  System_rst_N_10
+                  --------
+                    3.479  (34.0% logic, 66.0% route), 3 logic levels.
+
+Report: 3.647 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets ADC_SCLK_c]
+            4096 items scored, 4095 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 4.308ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \ADC_Int1/SPI_Cnt/temp__i5  (from ADC_SCLK_c +)
+   Destination:    FD1P3IX    CD             \ADC_Int1/SPI_Cnt/temp__i0  (to ADC_SCLK_c +)
+
+   Delay:                   9.175ns  (30.7% logic, 69.3% route), 7 logic levels.
+
+ Constraint Details:
+
+      9.175ns data_path \ADC_Int1/SPI_Cnt/temp__i5 to \ADC_Int1/SPI_Cnt/temp__i0 violates
+      5.000ns delay constraint less
+      0.133ns L_S requirement (totaling 4.867ns) by 4.308ns
+
+ Path Details: \ADC_Int1/SPI_Cnt/temp__i5 to \ADC_Int1/SPI_Cnt/temp__i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \ADC_Int1/SPI_Cnt/temp__i5 (from ADC_SCLK_c)
+Route         3   e 0.919                                  \ADC_Int1/SPI_Cnt/SPI_Cnt_Out[5]
+LUT4        ---     0.408              A to Z              \ADC_Int1/SPI_Cnt/i1_2_lut
+Route         4   e 0.937                                  \ADC_Int1/n5
+LUT4        ---     0.408              D to Z              \ADC_Int1/i1_3_lut_4_lut_adj_270
+Route         1   e 0.660                                  \ADC_Int1/n23394
+LUT4        ---     0.408              B to Z              \ADC_Int1/i1_4_lut_adj_212
+Route        10   e 1.120                                  \ADC_Int1/NS_ADC_Ctrl_4__N_1603[1]
+LUT4        ---     0.408              C to Z              \ADC_Int1/select_1792_Select_0_i6_3_lut
+Route         2   e 0.798                                  \ADC_Int1/n6
+LUT4        ---     0.408              A to Z              \ADC_Int1/i1_4_lut_adj_208
+Route         1   e 0.660                                  \ADC_Int1/n23330
+LUT4        ---     0.408              C to Z              \ADC_Int1/i20794_4_lut
+Route        16   e 1.266                                  \ADC_Int1/n7579
+                  --------
+                    9.175  (30.7% logic, 69.3% route), 7 logic levels.
+
+
+Error:  The following path violates requirements by 4.308ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \ADC_Int1/SPI_Cnt/temp__i5  (from ADC_SCLK_c +)
+   Destination:    FD1P3IX    CD             \ADC_Int1/SPI_Cnt/temp__i1  (to ADC_SCLK_c +)
+
+   Delay:                   9.175ns  (30.7% logic, 69.3% route), 7 logic levels.
+
+ Constraint Details:
+
+      9.175ns data_path \ADC_Int1/SPI_Cnt/temp__i5 to \ADC_Int1/SPI_Cnt/temp__i1 violates
+      5.000ns delay constraint less
+      0.133ns L_S requirement (totaling 4.867ns) by 4.308ns
+
+ Path Details: \ADC_Int1/SPI_Cnt/temp__i5 to \ADC_Int1/SPI_Cnt/temp__i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \ADC_Int1/SPI_Cnt/temp__i5 (from ADC_SCLK_c)
+Route         3   e 0.919                                  \ADC_Int1/SPI_Cnt/SPI_Cnt_Out[5]
+LUT4        ---     0.408              A to Z              \ADC_Int1/SPI_Cnt/i1_2_lut
+Route         4   e 0.937                                  \ADC_Int1/n5
+LUT4        ---     0.408              D to Z              \ADC_Int1/i1_3_lut_4_lut_adj_270
+Route         1   e 0.660                                  \ADC_Int1/n23394
+LUT4        ---     0.408              B to Z              \ADC_Int1/i1_4_lut_adj_212
+Route        10   e 1.120                                  \ADC_Int1/NS_ADC_Ctrl_4__N_1603[1]
+LUT4        ---     0.408              C to Z              \ADC_Int1/select_1792_Select_0_i6_3_lut
+Route         2   e 0.798                                  \ADC_Int1/n6
+LUT4        ---     0.408              A to Z              \ADC_Int1/i1_4_lut_adj_208
+Route         1   e 0.660                                  \ADC_Int1/n23330
+LUT4        ---     0.408              C to Z              \ADC_Int1/i20794_4_lut
+Route        16   e 1.266                                  \ADC_Int1/n7579
+                  --------
+                    9.175  (30.7% logic, 69.3% route), 7 logic levels.
+
+
+Error:  The following path violates requirements by 4.308ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \ADC_Int1/SPI_Cnt/temp__i5  (from ADC_SCLK_c +)
+   Destination:    FD1P3IX    CD             \ADC_Int1/SPI_Cnt/temp__i2  (to ADC_SCLK_c +)
+
+   Delay:                   9.175ns  (30.7% logic, 69.3% route), 7 logic levels.
+
+ Constraint Details:
+
+      9.175ns data_path \ADC_Int1/SPI_Cnt/temp__i5 to \ADC_Int1/SPI_Cnt/temp__i2 violates
+      5.000ns delay constraint less
+      0.133ns L_S requirement (totaling 4.867ns) by 4.308ns
+
+ Path Details: \ADC_Int1/SPI_Cnt/temp__i5 to \ADC_Int1/SPI_Cnt/temp__i2
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \ADC_Int1/SPI_Cnt/temp__i5 (from ADC_SCLK_c)
+Route         3   e 0.919                                  \ADC_Int1/SPI_Cnt/SPI_Cnt_Out[5]
+LUT4        ---     0.408              A to Z              \ADC_Int1/SPI_Cnt/i1_2_lut
+Route         4   e 0.937                                  \ADC_Int1/n5
+LUT4        ---     0.408              D to Z              \ADC_Int1/i1_3_lut_4_lut_adj_270
+Route         1   e 0.660                                  \ADC_Int1/n23394
+LUT4        ---     0.408              B to Z              \ADC_Int1/i1_4_lut_adj_212
+Route        10   e 1.120                                  \ADC_Int1/NS_ADC_Ctrl_4__N_1603[1]
+LUT4        ---     0.408              C to Z              \ADC_Int1/select_1792_Select_0_i6_3_lut
+Route         2   e 0.798                                  \ADC_Int1/n6
+LUT4        ---     0.408              A to Z              \ADC_Int1/i1_4_lut_adj_208
+Route         1   e 0.660                                  \ADC_Int1/n23330
+LUT4        ---     0.408              C to Z              \ADC_Int1/i20794_4_lut
+Route        16   e 1.266                                  \ADC_Int1/n7579
+                  --------
+                    9.175  (30.7% logic, 69.3% route), 7 logic levels.
+
+Warning: 9.308 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets clk]                     |     5.000 ns|    16.158 ns|    17 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets OSC_Out]                 |     5.000 ns|     3.647 ns|     6  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets ADC_SCLK_c]              |     5.000 ns|     9.308 ns|     7 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\RS232_Usr/LD_Chk_Sum                   |      22|    4076|     49.76%
+                                        |        |        |
+\RS232_Usr/n24015                       |       1|    4014|     49.01%
+                                        |        |        |
+\RS232_Usr/n23069                       |       1|    3944|     48.15%
+                                        |        |        |
+\RS232_Usr/LD_Chk_Sum_N_943             |       1|    3874|     47.30%
+                                        |        |        |
+n26813                                  |       3|    1977|     24.14%
+                                        |        |        |
+\RS232_Usr/n20795                       |       1|    1924|     23.49%
+                                        |        |        |
+\RS232_Usr/n14_adj_4602                 |       1|    1798|     21.95%
+                                        |        |        |
+\RS232_Usr/n6275                        |       8|    1738|     21.22%
+                                        |        |        |
+\RS232_Usr/n24331                       |       1|    1668|     20.36%
+                                        |        |        |
+\RS232_Usr/n20794                       |       1|    1602|     19.56%
+                                        |        |        |
+\RS232_Usr/n6398                        |       8|    1268|     15.48%
+                                        |        |        |
+\RS232_Usr/n20796                       |       1|    1246|     15.21%
+                                        |        |        |
+\RS232_Usr/n9592                        |       2|    1122|     13.70%
+                                        |        |        |
+\ADC_Int1/ADC_SCLK_c_enable_373         |      16|    1040|     12.70%
+                                        |        |        |
+CS_ADC_Ctrl[1]                          |       3|    1024|     12.50%
+                                        |        |        |
+\ADC_Int1/CS_ADC_Ctrl[0]                |       5|     953|     11.63%
+                                        |        |        |
+\RS232_Usr/n24320                       |       1|     942|     11.50%
+                                        |        |        |
+\ADC_Int1/n23352                        |       1|     896|     10.94%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 8191  Score: 44202928
+
+Constraints cover  45823 paths, 4875 nets, and 11473 connections (62.8% coverage)
+
+
+Peak memory: 161226752 bytes, TRCE: 9662464 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

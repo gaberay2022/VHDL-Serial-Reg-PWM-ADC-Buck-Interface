@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="BusInterface_Final_UG" device="LCMXO3D-9400HC-6BG256C" default_implementation="BusInterface_UART_PWM_SPI">
+    <Options>
+        <Option name="HDL type" value="VHDL"/>
+        <Option name="VerilogStandard" value="Verilog 2001"/>
+    </Options>
+    <Implementation title="BusInterface_UART_PWM_SPI" dir="BusInterface_UART_PWM_SPI" description="BusInterface_UART_PWM_SPI" synthesis="lse" default_strategy="Strategy1">
+        <Options>
+            <Option name="HDL type" value="Verilog"/>
+            <Option name="HDL_KEYFILE" value=""/>
+            <Option name="HDL_PARAM" value=""/>
+            <Option name="VERILOG_DIRECTIVES" value=""/>
+            <Option name="VerilogStandard" value="Verilog 2001"/>
+            <Option name="lib" value="work"/>
+            <Option name="top" value="Bus_Interface_Top"/>
+            <Option name="include path" value=""/>
+        </Options>
+        <Source name="BusInterface_UART_PWM_SPI/source/Bus_Interface_Common.vhd" type="VHDL" type_short="VHDL">
+            <Options lib="work"/>
+        </Source>
+        <Source name="BusInterface_UART_PWM_SPI/source/Bus_Interface_tb.vhd" type="VHDL" type_short="VHDL" syn_sim="SimOnly">
+            <Options lib="work"/>
+        </Source>
+        <Source name="BusInterface_UART_PWM_SPI/source/Bus_Interface_Top.vhd" type="VHDL" type_short="VHDL">
+            <Options lib="work"/>
+        </Source>
+        <Source name="BusInterface_UART_PWM_SPI/source/Bus_Master.vhd" type="VHDL" type_short="VHDL">
+            <Options lib="work"/>
+        </Source>
+        <Source name="BusInterface_UART_PWM_SPI/source/DPRAM.ipx" type="IPX_Module" type_short="IPX" excluded="TRUE"/>
+        <Source name="BusInterface_UART_PWM_SPI/source/Generic_Components.vhd" type="VHDL" type_short="VHDL">
+            <Options lib="work"/>
+        </Source>
+        <Source name="BusInterface_UART_PWM_SPI/source/LED_Ctrl.vhd" type="VHDL" type_short="VHDL">
+            <Options lib="work"/>
+        </Source>
+        <Source name="BusInterface_UART_PWM_SPI/source/PLL_Clk.ipx" type="IPX_Module" type_short="IPX"/>
+        <Source name="BusInterface_UART_PWM_SPI/source/SPRAM.ipx" type="IPX_Module" type_short="IPX"/>
+        <Source name="BusInterface_UART_PWM_SPI/source/UART_Usr_Int.vhd" type="VHDL" type_short="VHDL">
+            <Options lib="work"/>
+        </Source>
+        <Source name="BusInterface_UART_PWM_SPI/source/SPI_ADC_Int.vhd" type="VHDL" type_short="VHDL">
+            <Options lib="work"/>
+        </Source>
+        <Source name="BusInterface_Final_UG.lpf" type="Logic Preference" type_short="LPF"/>
+        <Source name="BusInterface_UART_PWM_SPI/BusInterface_UART_PWM_SPI.xcf" type="Programming Project File" type_short="Programming"/>
+        <Source name="Sim1/Sim1.spf" type="Simulation Project File" type_short="SPF"/>
+    </Implementation>
+    <Strategy name="Strategy1" file="BusInterface_UART_PWM_SPI1.sty"/>
+</BaliProject>

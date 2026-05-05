@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="DPRAM" module="DPRAM" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2021 04 21 23:13:39.799" version="7.5" type="Module" synthesis="lse" source_format="VHDL">
+  <Package>
+		<File name="" type="" modified="2021 04 21 23:13:39.687"/>
+		<File name="DPRAM.lpc" type="lpc" modified="2021 04 21 23:13:38.445"/>
+		<File name="DPRAM.vhd" type="top_level_vhdl" modified="2021 04 21 23:13:38.520"/>
+		<File name="DPRAM_tmpl.vhd" type="template_vhdl" modified="2021 04 21 23:13:38.520"/>
+		<File name="tb_DPRAM_tmpl.vhd" type="testbench_vhdl" modified="2021 04 21 23:13:38.523"/>
+  </Package>
+</DiamondModule>

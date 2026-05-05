@@ -1,0 +1,2035 @@
+<HTML>
+<HEAD><TITLE>Synthesis and Ngdbuild Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
+synthesis:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Tue May 05 14:54:13 2026
+
+
+Command Line:  synthesis -f BusInterface_Final_UG_BusInterface_UART_PWM_SPI_lattice.synproj -gui -msgset C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Spring2026/promote.xml 
+
+Synthesis options:
+The -a option is MachXO3D.
+The -s option is 6.
+The -t option is CABGA256.
+The -d option is LCMXO3D-9400HC.
+Using package CABGA256.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO3D
+
+### Device  : LCMXO3D-9400HC
+
+### Package : CABGA256
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Timing
+Top-level module name = Bus_Interface_Top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p C:/lscc/diamond/3.13/ispfpga/se5c00/data (searchpath added)
+-p C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Spring2026/BusInterface_UART_PWM_SPI (searchpath added)
+-p C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Spring2026 (searchpath added)
+VHDL library = work
+VHDL design file = C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Spring2026/BusInterface_UART_PWM_SPI/source/Bus_Interface_Common.vhd
+VHDL design file = C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Spring2026/BusInterface_UART_PWM_SPI/source/Bus_Interface_Top.vhd
+VHDL design file = C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Spring2026/BusInterface_UART_PWM_SPI/source/Bus_Master.vhd
+VHDL design file = C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Spring2026/BusInterface_UART_PWM_SPI/source/Generic_Components.vhd
+VHDL design file = C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Spring2026/BusInterface_UART_PWM_SPI/source/LED_Ctrl.vhd
+VHDL design file = C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Spring2026/BusInterface_UART_PWM_SPI/source/PLL_Clk.vhd
+VHDL design file = C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Spring2026/BusInterface_UART_PWM_SPI/source/SPRAM.vhd
+VHDL design file = C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Spring2026/BusInterface_UART_PWM_SPI/source/UART_Usr_Int.vhd
+VHDL design file = C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Spring2026/BusInterface_UART_PWM_SPI/source/SPI_ADC_Int.vhd
+VHDL design file = C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Spring2026/BusInterface_UART_PWM_SPI/source/PI_Buck_Int.vhd
+NGD file = BusInterface_Final_UG_BusInterface_UART_PWM_SPI.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file C:/lscc/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo3d.v. VERI-1482
+Compile design.
+Compile Design Begin
+INFO - synthesis: The default VHDL library search path is now "C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Spring2026/BusInterface_UART_PWM_SPI". VHDL-1504
+Analyzing VHDL file c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/bus_interface_common.vhd. VHDL-1481
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/bus_interface_common.vhd(55): analyzing package bus_interface_common. VHDL-1014
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/bus_interface_common.vhd(116): analyzing package body bus_interface_common. VHDL-1013
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/bus_interface_top.vhd. VHDL-1481
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/bus_interface_top.vhd(12): analyzing entity bus_interface_top. VHDL-1012
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/bus_interface_top.vhd(36): analyzing architecture behavioral. VHDL-1010
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/bus_master.vhd. VHDL-1481
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/bus_master.vhd(42): analyzing entity bus_master. VHDL-1012
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/bus_master.vhd(55): analyzing architecture behavioral. VHDL-1010
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/generic_components.vhd. VHDL-1481
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/generic_components.vhd(45): analyzing entity bus_int. VHDL-1012
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/generic_components.vhd(68): analyzing architecture behavior. VHDL-1010
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/generic_components.vhd(200): analyzing entity std_fifo. VHDL-1012
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/generic_components.vhd(218): analyzing architecture behavioral. VHDL-1010
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/generic_components.vhd(297): analyzing entity pwm_16b. VHDL-1012
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/generic_components.vhd(309): analyzing architecture behavioral. VHDL-1010
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/generic_components.vhd(401): analyzing entity sreg_ps_16. VHDL-1012
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/generic_components.vhd(407): analyzing architecture behavior. VHDL-1010
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/generic_components.vhd(446): analyzing entity sreg_sp_16. VHDL-1012
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/generic_components.vhd(452): analyzing architecture behavior. VHDL-1010
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/generic_components.vhd(483): analyzing entity std_counter. VHDL-1012
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/generic_components.vhd(492): analyzing architecture behavior. VHDL-1010
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/led_ctrl.vhd. VHDL-1481
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/led_ctrl.vhd(43): analyzing entity led_ctrl. VHDL-1012
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/led_ctrl.vhd(65): analyzing architecture behavioral. VHDL-1010
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/pll_clk.vhd. VHDL-1481
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/pll_clk.vhd(14): analyzing entity pll_clk. VHDL-1012
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/pll_clk.vhd(21): analyzing architecture structure. VHDL-1010
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/spram.vhd. VHDL-1481
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/spram.vhd(14): analyzing entity spram. VHDL-1012
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/spram.vhd(25): analyzing architecture structure. VHDL-1010
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/uart_usr_int.vhd. VHDL-1481
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/uart_usr_int.vhd(98): analyzing entity rs232_usr_int. VHDL-1012
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/uart_usr_int.vhd(116): analyzing architecture behavioral. VHDL-1010
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/spi_adc_int.vhd. VHDL-1481
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/spi_adc_int.vhd(66): analyzing entity spi_rom. VHDL-1012
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/spi_adc_int.vhd(71): analyzing architecture behavior. VHDL-1010
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/spi_adc_int.vhd(114): analyzing entity adc_int. VHDL-1012
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/spi_adc_int.vhd(131): analyzing architecture behavioral. VHDL-1010
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/pi_buck_int.vhd. VHDL-1481
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/pi_buck_int.vhd(10): analyzing entity pi_buck. VHDL-1012
+INFO - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/pi_buck_int.vhd(23): analyzing architecture behavioral. VHDL-1010
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+unit Bus_Interface_Top is not yet analyzed. VHDL-1485
+c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/bus_interface_top.vhd(12): executing Bus_Interface_Top(Behavioral)
+
+WARNING - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/bus_interface_top.vhd(34): replacing existing netlist Bus_Interface_Top(Behavioral). VHDL-1205
+Top module name (VHDL): Bus_Interface_Top
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/se5c00/data/se5clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'se5c9400.nph' in environment: C:/lscc/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 7.
+Top-level module name = Bus_Interface_Top.
+WARNING - synthesis: Initial value found on net gnd will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM_Test_Out will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Addr[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Addr[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Addr[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Addr[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Addr[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Addr[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Addr[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Addr[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Addr[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Addr[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Addr[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Addr[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Addr[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Addr[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Addr[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Addr[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Xrqst will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net YDat will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net BusRqst[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net BusRqst[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net BusRqst[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net BusRqst[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Data[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Data[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Data[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Data[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Data[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Data[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Data[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Data[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Data[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Data[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Data[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Data[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Data[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Data[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Data[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Data[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Xdat will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net BusCtrl[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net BusCtrl[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net BusCtrl[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net BusCtrl[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net OSC_Out will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net clk will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PLL_Lock will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reset_Cnt_Out[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reset_Cnt_Out[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reset_Cnt_Out[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reset_Cnt_Out[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reset_Cnt_Out[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reset_Cnt_Out[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reset_Cnt_Out[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reset_Cnt_Out[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LED_2n will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LED_3n will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LED_4n will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LED_5n will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LED_6n will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem1_wea will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem1_douta[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem1_douta[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem1_douta[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem1_douta[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem1_douta[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem1_douta[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem1_douta[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem1_douta[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem1_douta[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem1_douta[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem1_douta[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem1_douta[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem1_douta[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem1_douta[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem1_douta[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem1_douta[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_Data will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_BusCtrl will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net BusCtrl_Temp[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net BusCtrl_Temp[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net BusCtrl_Temp[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net BusCtrl_Temp[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net BusCtrl_Temp[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net BusCtrl_Temp[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net BusCtrl_Temp[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net BusCtrl_Temp[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net BusCtrl_Temp[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net BusCtrl_Temp[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net n357 will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net gnd will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_WriteEn will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_ReadEn will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_DataIn[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_DataIn[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_DataIn[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_DataIn[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_DataIn[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_DataIn[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_DataIn[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_DataIn[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_DataOut[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_DataOut[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_DataOut[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_DataOut[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_DataOut[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_DataOut[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_DataOut[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_DataOut[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_Empty will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_R_Full will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_WriteEn will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_ReadEn will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_DataIn[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_DataIn[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_DataIn[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_DataIn[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_DataIn[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_DataIn[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_DataIn[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_DataIn[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_DataOut[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_DataOut[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_DataOut[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_DataOut[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_DataOut[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_DataOut[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_DataOut[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_DataOut[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net STD_FIFO_W_Empty will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_WE will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_RE will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_Busy will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_busy2 will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_rx will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_temp_data will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_temp2 will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_Temp_Data_High will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_Temp_Data_Low will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net ld_temp_cmd will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_Pkt_Len will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_Chk_Sum will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_Base_Addr will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_Reg_Addr_H will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_Reg_Addr_L will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_Reg_Cnt will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net busy will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net busy2 will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp_data[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp_data[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp_data[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp_data[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp_data[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp_data[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp_data[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp_data[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp_data[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp_data[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp_data[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp_data[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp_data[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp_data[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp_data[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp_data[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp2[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp2[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp2[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp2[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp2[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp2[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp2[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net temp2[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Data_High[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Data_High[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Data_High[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Data_High[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Data_High[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Data_High[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Data_High[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Data_High[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Data_Low[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Data_Low[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Data_Low[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Data_Low[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Data_Low[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Data_Low[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Data_Low[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Data_Low[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Cmd[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Cmd[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Cmd[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Cmd[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Cmd[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Cmd[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Cmd[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Temp_Cmd[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Pkt_Len[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Pkt_Len[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Pkt_Len[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Pkt_Len[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Pkt_Len[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Pkt_Len[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Pkt_Len[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Pkt_Len[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Chk_Sum[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Chk_Sum[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Chk_Sum[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Chk_Sum[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Chk_Sum[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Chk_Sum[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Chk_Sum[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Chk_Sum[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Chk_Sum[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Chk_Sum[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Chk_Sum[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Chk_Sum[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Chk_Sum[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Chk_Sum[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Chk_Sum[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Chk_Sum[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Base_Addr[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Base_Addr[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Base_Addr[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Base_Addr[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Base_Addr[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Base_Addr[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Base_Addr[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Base_Addr[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Base_Addr[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Base_Addr[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Base_Addr[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Base_Addr[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Base_Addr[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Base_Addr[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Base_Addr[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Base_Addr[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Addr_H[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Addr_H[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Addr_H[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Addr_H[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Addr_H[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Addr_H[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Addr_H[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Addr_H[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Addr_L[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Addr_L[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Addr_L[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Addr_L[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Addr_L[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Addr_L[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Addr_L[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Addr_L[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Cnt[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Cnt[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Cnt[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Cnt[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Cnt[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Cnt[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Cnt[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Reg_Cnt[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Rcv_Cnt_rst will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Rcv_Cnt_INC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Rcv_Cnt_Out[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Rcv_Cnt_Out[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Rcv_Cnt_Out[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Rcv_Cnt_Out[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Rcv_Cnt_Out[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Rcv_Cnt_Out[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Rcv_Cnt_Out[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Rcv_Cnt_Out[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Buf_Cnt_rst will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net RAM_wea will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_DataIn will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_Data will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net n611 will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_RE will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_Busy will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_rst will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_INC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_rst will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_INC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_Out[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_Out[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_Out[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_Out[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_Out[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_Out[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_Out[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_Out[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_PWM_En will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_PWM_PRD will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_PWM1_DC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_PWM2_DC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_PWM3_DC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_PWM4_DC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net NS_PWM1_4__N_1536 will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM1_Cnt_INC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net NS_PWM2_4__N_1538 will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM2_Cnt_INC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net NS_PWM3_4__N_1540 will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM3_Cnt_INC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net NS_PWM4_4__N_1542 will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM4_Cnt_INC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM1_Cnt_Out[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM1_Cnt_Out[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM1_Cnt_Out[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM1_Cnt_Out[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM1_Cnt_Out[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM1_Cnt_Out[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM1_Cnt_Out[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM1_Cnt_Out[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM1_Cnt_Out[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM1_Cnt_Out[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM1_Cnt_Out[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM1_Cnt_Out[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM1_Cnt_Out[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM1_Cnt_Out[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM1_Cnt_Out[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM1_Cnt_Out[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM2_Cnt_Out[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM2_Cnt_Out[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM2_Cnt_Out[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM2_Cnt_Out[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM2_Cnt_Out[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM2_Cnt_Out[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM2_Cnt_Out[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM2_Cnt_Out[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM2_Cnt_Out[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM2_Cnt_Out[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM2_Cnt_Out[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM2_Cnt_Out[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM2_Cnt_Out[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM2_Cnt_Out[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM2_Cnt_Out[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM2_Cnt_Out[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM3_Cnt_Out[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM3_Cnt_Out[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM3_Cnt_Out[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM3_Cnt_Out[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM3_Cnt_Out[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM3_Cnt_Out[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM3_Cnt_Out[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM3_Cnt_Out[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM3_Cnt_Out[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM3_Cnt_Out[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM3_Cnt_Out[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM3_Cnt_Out[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM3_Cnt_Out[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM3_Cnt_Out[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM3_Cnt_Out[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM3_Cnt_Out[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM4_Cnt_Out[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM4_Cnt_Out[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM4_Cnt_Out[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM4_Cnt_Out[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM4_Cnt_Out[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM4_Cnt_Out[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM4_Cnt_Out[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM4_Cnt_Out[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM4_Cnt_Out[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM4_Cnt_Out[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM4_Cnt_Out[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM4_Cnt_Out[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM4_Cnt_Out[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM4_Cnt_Out[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM4_Cnt_Out[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net PWM4_Cnt_Out[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net gnd will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net NS_ADC_Ctrl[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net NS_ADC_Ctrl[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net NS_ADC_Ctrl[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net NS_ADC_Ctrl[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net NS_ADC_Ctrl[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net NS_Bus_Ctrl[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net NS_Bus_Ctrl[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net NS_Bus_Ctrl[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net NS_Bus_Ctrl[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net NS_Bus_Ctrl[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_Cnt_INC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_Cnt_rst will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Prg_Cnt_INC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Prg_Cnt_rst will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Setup_Cnt_INC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Setup_Cnt_rst will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Prg_Cnt_Out[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Prg_Cnt_Out[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Prg_Cnt_Out[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Prg_Cnt_Out[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Prg_Cnt_Out[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Prg_Cnt_Out[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Prg_Cnt_Out[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Prg_Cnt_Out[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Setup_Cnt_Out[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Setup_Cnt_Out[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Setup_Cnt_Out[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Setup_Cnt_Out[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Setup_Cnt_Out[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Setup_Cnt_Out[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Setup_Cnt_Out[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Setup_Cnt_Out[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_Cnt_Out[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_Cnt_Out[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_Cnt_Out[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_Cnt_Out[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_Cnt_Out[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_Cnt_Out[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_Cnt_Out[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_Cnt_Out[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_Cnt_Out[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_Cnt_Out[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_Cnt_Out[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_Cnt_Out[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_Cnt_Out[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_Cnt_Out[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_Cnt_Out[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_Cnt_Out[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_ROM1_D_SEL will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_ROM1_data[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_ROM1_data[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_ROM1_data[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_ROM1_data[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_ROM1_data[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_ROM1_data[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_ROM1_data[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_ROM1_data[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_ROM1_data[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_ROM1_data[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_ROM1_data[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_ROM1_data[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_ROM1_data[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_ROM1_data[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_ROM1_data[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_ROM1_data[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_PS_ld_D will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_PS_sh_D will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_PS_rst will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_SP_ld_D will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_SP_rst will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_SP1_Data_Out[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_SP1_Data_Out[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_SP1_Data_Out[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_SP1_Data_Out[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_SP1_Data_Out[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_SP1_Data_Out[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_SP1_Data_Out[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_SP1_Data_Out[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_SP1_Data_Out[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_SP1_Data_Out[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_SP1_Data_Out[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_SP1_Data_Out[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_SP1_Data_Out[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_SP1_Data_Out[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_SP1_Data_Out[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net ADC_wea will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net ADC_Ave_Ld will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Ave_Cnt_INC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Ave_Cnt_rst will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Ave_Cnt_Out[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Ave_Cnt_Out[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Ave_Cnt_Out[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Ave_Cnt_Out[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Ave_Cnt_Out[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Ave_Cnt_Out[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Ave_Cnt_Out[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Ave_Cnt_Out[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_WE will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_Busy will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_INC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem_Addr_Cnt_rst will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem_Addr_Cnt_Out[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem_Addr_Cnt_Out[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem_Addr_Cnt_Out[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem_Addr_Cnt_Out[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem_Addr_Cnt_Out[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem_Addr_Cnt_Out[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem_Addr_Cnt_Out[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Mem_Addr_Cnt_Out[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_CNT_Loop_INC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_CNT_Loop_Out[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_CNT_Loop_Out[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_CNT_Loop_Out[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_CNT_Loop_Out[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_CNT_Loop_Out[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_CNT_Loop_Out[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_CNT_Loop_Out[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_CNT_Loop_Out[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_CNT_Loop_Out[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_CNT_Loop_Out[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_CNT_Loop_Out[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_CNT_Loop_Out[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_CNT_Loop_Out[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_CNT_Loop_Out[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_CNT_Loop_Out[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net SPI_CNT_Loop_Out[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net gnd will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_WE will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_RE will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_Busy will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataIn[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_DataOut[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Int1_AddrIn[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_rst will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_INC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Bus_Cnt_Out[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_rst will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_INC will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_Out[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_Out[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_Out[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_Out[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_Out[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_Out[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_Out[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Delay_Cnt_Out[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_Cmd_In will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_Mea_In will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_Cmd_Out will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[31] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[30] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[29] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[28] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[27] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[26] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[25] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[24] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[23] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[22] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[21] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[20] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[19] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[18] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[17] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[16] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Err[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[31] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[30] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[29] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[28] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[27] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[26] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[25] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[24] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[23] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[22] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[21] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[20] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[19] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[18] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[17] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[16] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net P_Temp[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[31] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[30] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[29] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[28] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[27] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[26] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[25] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[24] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[23] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[22] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[21] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[20] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[19] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[18] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[17] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[16] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[31] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[30] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[29] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[28] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[27] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[26] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[25] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[24] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[23] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[22] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[21] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[20] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[19] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[18] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[17] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[16] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net I_Temp[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_Err will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_P will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_Acc will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[31] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[30] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[29] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[28] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[27] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[26] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[25] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[24] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[23] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[22] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[21] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[20] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[19] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[18] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[17] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[16] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Acc_Temp_17b[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_Acc_Temp_17b will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[31] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[30] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[29] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[28] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[27] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[26] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[25] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[24] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[23] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[22] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[21] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[20] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[19] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[18] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[17] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[16] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Cmd_Temp_17b[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net LD_Cmd_Temp_17b will be ignored due to unrecognized driver type
+######## Converting I/O port SCI_TX to output.
+######## Converting I/O port ADC_SCLK to output.
+######## Converting I/O port ADC_DIN to output.
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem[14] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem[14] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem[14] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem[14] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem[14] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem[14] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem[14] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem[14] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem[14] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem[14] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem[14] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem[14] is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem[14] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem[14] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem[14] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem[14] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem[13] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem[13] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem[13] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem[13] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem[13] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem[13] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem[13] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem[13] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem[13] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem[13] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem[13] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem[13] is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem[13] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem[13] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem[13] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem[13] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem[12] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem[12] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem[12] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem[12] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem[12] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem[12] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem[12] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem[12] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem[12] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem[12] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem[12] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem[12] is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem[12] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem[12] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem[12] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem[12] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem[11] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem[11] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem[11] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem[11] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem[11] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem[11] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem[11] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem[11] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem[11] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem[11] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem[11] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem[11] is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem[11] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem[11] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem[11] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem[11] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem[10] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem[10] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem[10] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem[10] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem[10] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem[10] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem[10] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem[10] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem[10] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem[10] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem[10] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem[10] is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem[10] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem[10] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem[10] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem[10] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem[9] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem[9] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem[9] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem[9] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem[9] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem[9] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem[9] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem[9] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem[9] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem[9] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem[9] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem[9] is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem[9] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem[9] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem[9] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem[9] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem[8] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem[8] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem[8] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem[8] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem[8] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem[8] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem[8] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem[8] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem[8] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem[8] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem[8] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem[8] is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem[8] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem[8] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem[8] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem[8] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem[15] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem[15] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem[15] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem[15] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem[15] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem[15] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem[15] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem[15] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem[15] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem[15] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem[15] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem[15] is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem[15] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem[15] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem[15] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem[15] is stuck at Zero
+INFO - synthesis: Extracted state machine for register '\BM/CS' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 0000001
+
+ 0001 -> 0000010
+
+ 0010 -> 0000100
+
+ 0011 -> 0001000
+
+ 0100 -> 0010000
+
+ 0101 -> 0100000
+
+ 0110 -> 1000000
+
+INFO - synthesis: Extracted state machine for register '\LED_Ctrll/CS_Bus' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 00000 -> 000000000000000001
+
+ 00001 -> 000000000000000010
+
+ 00010 -> 000000000000000100
+
+ 00011 -> 000000000000001000
+
+ 00100 -> 000000000000010000
+
+ 00101 -> 000000000000100000
+
+ 00110 -> 000000000001000000
+
+ 00111 -> 000000000010000000
+
+ 01000 -> 000000000100000000
+
+ 01001 -> 000000001000000000
+
+ 01010 -> 000000010000000000
+
+ 01011 -> 000000100000000000
+
+ 01100 -> 000001000000000000
+
+ 01101 -> 000010000000000000
+
+ 01110 -> 000100000000000000
+
+ 01111 -> 001000000000000000
+
+ 10000 -> 010000000000000000
+
+ 10001 -> 100000000000000000
+
+INFO - synthesis: Extracted state machine for register '\ADC_Int1/CS_ADC_Ctrl' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 00000 -> 0000000000000000001
+
+ 00001 -> 0000000000000000010
+
+ 00010 -> 0000000000000000100
+
+ 00011 -> 0000000000000001000
+
+ 00100 -> 0000000000000010000
+
+ 00101 -> 0000000000000100000
+
+ 00110 -> 0000000000001000000
+
+ 00111 -> 0000000000010000000
+
+ 01000 -> 0000000000100000000
+
+ 01001 -> 0000000001000000000
+
+ 01010 -> 0000000010000000000
+
+ 01011 -> 0000000100000000000
+
+ 01100 -> 0000001000000000000
+
+ 01101 -> 0000010000000000000
+
+ 01110 -> 0000100000000000000
+
+ 01111 -> 0001000000000000000
+
+ 10000 -> 0010000000000000000
+
+ 10001 -> 0100000000000000000
+
+ 10010 -> 1000000000000000000
+
+INFO - synthesis: Extracted state machine for register '\ADC_Int1/CS_Bus_Ctrl' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 00000 -> 0001
+
+ 00001 -> 0010
+
+ 00010 -> 0100
+
+ 00011 -> 1000
+
+INFO - synthesis: Extracted state machine for register '\PI_Buck1/CS_Bus' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 00000 -> 00000000000000001
+
+ 00001 -> 00000000000000010
+
+ 00010 -> 00000000000000100
+
+ 00011 -> 00000000000001000
+
+ 00100 -> 00000000000010000
+
+ 00101 -> 00000000000100000
+
+ 00110 -> 00000000001000000
+
+ 00111 -> 00000000010000000
+
+ 01000 -> 00000000100000000
+
+ 01001 -> 00000001000000000
+
+ 01010 -> 00000010000000000
+
+ 01011 -> 00000100000000000
+
+ 01100 -> 00001000000000000
+
+ 01101 -> 00010000000000000
+
+ 01110 -> 00100000000000000
+
+ 01111 -> 01000000000000000
+
+ 10000 -> 10000000000000000
+
+INFO - synthesis: Extracted state machine for register '\RS232_Usr/Bus_Int1/CS' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 00001
+
+ 0001 -> 00010
+
+ 0010 -> 00100
+
+ 0011 -> 01000
+
+ 0100 -> 10000
+
+INFO - synthesis: Extracted state machine for register '\LED_Ctrll/Bus_Int1/CS' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 001
+
+ 0001 -> 010
+
+ 0010 -> 100
+
+INFO - synthesis: Extracted state machine for register '\ADC_Int1/Bus_Int1/CS' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 001
+
+ 0011 -> 010
+
+ 0100 -> 100
+
+INFO - synthesis: Extracted state machine for register '\PI_Buck1/Bus_Int1/CS' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 00001
+
+ 0001 -> 00010
+
+ 0010 -> 00100
+
+ 0011 -> 01000
+
+ 0100 -> 10000
+
+INFO - synthesis: Extracted state machine for register '\RS232_Usr/CS_RS232_R' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 000000 -> 0001
+
+ 000001 -> 0010
+
+ 000010 -> 0100
+
+ 000011 -> 1000
+
+INFO - synthesis: Extracted state machine for register '\RS232_Usr/CS_RS232_W' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 000000 -> 0001
+
+ 000001 -> 0010
+
+ 000010 -> 0100
+
+ 000011 -> 1000
+
+INFO - synthesis: Extracted state machine for register '\LED_Ctrll/CS_PWM1' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 00000 -> 001
+
+ 00001 -> 010
+
+ 00010 -> 100
+
+INFO - synthesis: Extracted state machine for register '\LED_Ctrll/CS_PWM2' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 00000 -> 001
+
+ 00001 -> 010
+
+ 00010 -> 100
+
+INFO - synthesis: Extracted state machine for register '\LED_Ctrll/CS_PWM3' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 00000 -> 001
+
+ 00001 -> 010
+
+ 00010 -> 100
+
+INFO - synthesis: Extracted state machine for register '\LED_Ctrll/CS_PWM4' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 00000 -> 001
+
+ 00001 -> 010
+
+ 00010 -> 100
+
+
+
+
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Temp[14] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem_Temp[14] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem_Temp[14] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem_Temp[14] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem_Temp[14] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem_Temp[14] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem_Temp[14] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem_Temp[14] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem_Temp[14] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem_Temp[14] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem_Temp[14] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem_Temp[14] is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem_Temp[14] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem_Temp[14] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem_Temp[14] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem_Temp[14] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Temp[13] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem_Temp[13] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem_Temp[13] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem_Temp[13] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem_Temp[13] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem_Temp[13] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem_Temp[13] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem_Temp[13] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem_Temp[13] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem_Temp[13] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem_Temp[13] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem_Temp[13] is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem_Temp[13] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem_Temp[13] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem_Temp[13] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem_Temp[13] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Temp[12] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem_Temp[12] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem_Temp[12] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem_Temp[12] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem_Temp[12] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem_Temp[12] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem_Temp[12] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem_Temp[12] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem_Temp[12] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem_Temp[12] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem_Temp[12] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem_Temp[12] is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem_Temp[12] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem_Temp[12] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem_Temp[12] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem_Temp[12] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Temp[11] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem_Temp[11] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem_Temp[11] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem_Temp[11] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem_Temp[11] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem_Temp[11] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem_Temp[11] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem_Temp[11] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem_Temp[11] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem_Temp[11] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem_Temp[11] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem_Temp[11] is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem_Temp[11] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem_Temp[11] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem_Temp[11] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem_Temp[11] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Temp[10] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem_Temp[10] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem_Temp[10] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem_Temp[10] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem_Temp[10] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem_Temp[10] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem_Temp[10] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem_Temp[10] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem_Temp[10] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem_Temp[10] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem_Temp[10] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem_Temp[10] is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem_Temp[10] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem_Temp[10] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem_Temp[10] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem_Temp[10] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Temp[9] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem_Temp[9] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem_Temp[9] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem_Temp[9] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem_Temp[9] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem_Temp[9] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem_Temp[9] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem_Temp[9] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem_Temp[9] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem_Temp[9] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem_Temp[9] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem_Temp[9] is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem_Temp[9] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem_Temp[9] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem_Temp[9] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem_Temp[9] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Temp[8] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem_Temp[8] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem_Temp[8] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem_Temp[8] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem_Temp[8] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem_Temp[8] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem_Temp[8] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem_Temp[8] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem_Temp[8] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem_Temp[8] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem_Temp[8] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem_Temp[8] is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem_Temp[8] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem_Temp[8] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem_Temp[8] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem_Temp[8] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \LED_Ctrll/Bus_Int1/DataIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \LED_Ctrll/Bus_Int1/DataIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \LED_Ctrll/Bus_Int1/DataIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \LED_Ctrll/Bus_Int1/DataIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \LED_Ctrll/Bus_Int1/DataIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \LED_Ctrll/Bus_Int1/DataIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \LED_Ctrll/Bus_Int1/DataIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \LED_Ctrll/Bus_Int1/DataIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \LED_Ctrll/Bus_Int1/DataIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \LED_Ctrll/Bus_Int1/DataIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \LED_Ctrll/Bus_Int1/DataIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \LED_Ctrll/Bus_Int1/DataIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \LED_Ctrll/Bus_Int1/DataIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \LED_Ctrll/Bus_Int1/DataIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \LED_Ctrll/Bus_Int1/DataIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \LED_Ctrll/Bus_Int1/DataIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Temp[15] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem_Temp[15] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem_Temp[15] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem_Temp[15] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem_Temp[15] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem_Temp[15] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem_Temp[15] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem_Temp[15] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem_Temp[15] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem_Temp[15] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem_Temp[15] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem_Temp[15] is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem_Temp[15] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem_Temp[15] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem_Temp[15] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem_Temp[15] is stuck at Zero
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave[14](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave[13](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave[12](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave[11](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave[10](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave[9](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave[8](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave_M1[14](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave_M1[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave_M1[13](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave_M1[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave_M1[12](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave_M1[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave_M1[11](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave_M1[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave_M1[10](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave_M1[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave_M1[9](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave_M1[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave_M1[8](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave_M1[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave_M2[14](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave_M2[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave_M2[13](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave_M2[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave_M2[12](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave_M2[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave_M2[11](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave_M2[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave_M2[10](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave_M2[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave_M2[9](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave_M2[15]
+
+Removed duplicate sequential element \ADC_Int1/ADC_Mem_Ave_M2[8](16 bit), because it is equivalent to \ADC_Int1/ADC_Mem_Ave_M2[15]
+
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem[6] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem[6] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem[6] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem[6] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem[5] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem[5] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem[5] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem[5] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem[4] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem[4] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem[4] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem[4] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem[3] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem[3] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem[3] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem[3] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem[2] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem[2] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem[2] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem[2] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem[1] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem[1] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem[1] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem[1] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem[0] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem[0] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem[0] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem[0] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave[15] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem_Ave[15] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem_Ave[15] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem_Ave[15] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem_Ave[15] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem_Ave[15] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem_Ave[15] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem_Ave[15] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem_Ave[15] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem_Ave[15] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem_Ave[15] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem_Ave[15] is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem_Ave[15] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem_Ave[15] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem_Ave[15] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem_Ave[15] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave[6] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave[5] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave[4] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave[3] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave[2] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave[1] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave[0] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \PI_Buck1/Bus_Int1/AddrIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \PI_Buck1/Bus_Int1/AddrIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \PI_Buck1/Bus_Int1/AddrIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \PI_Buck1/Bus_Int1/AddrIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \PI_Buck1/Bus_Int1/AddrIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \PI_Buck1/Bus_Int1/AddrIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \PI_Buck1/Bus_Int1/AddrIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \PI_Buck1/Bus_Int1/AddrIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \PI_Buck1/Bus_Int1/AddrIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \PI_Buck1/Bus_Int1/AddrIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \PI_Buck1/Bus_Int1/AddrIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \PI_Buck1/Bus_Int1/AddrIn_reg_o is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem[7] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem[7] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem[7] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem[7] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave[7] is stuck at Zero
+######## Found 3 RTL RAMs in the design.
+######## Mapping RTL RAM \RS232_Usr/STD_FIFO_R/Memory to 1 EBR blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \RS232_Usr/STD_FIFO_W/Memory to 1 EBR blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \RS232_Usr/RAM to 1 EBR blocks in SINGLE_PORT Mode
+
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave_M1[15]_ is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem_Ave_M1[15]_ is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem_Ave_M1[15]_ is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem_Ave_M1[15]_ is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem_Ave_M1[15]_ is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem_Ave_M1[15]_ is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem_Ave_M1[15]_ is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem_Ave_M1[15]_ is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem_Ave_M1[15]_ is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem_Ave_M1[15]_ is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem_Ave_M1[15]_ is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem_Ave_M1[15]_ is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem_Ave_M1[15]_ is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem_Ave_M1[15]_ is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem_Ave_M1[15]_ is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem_Ave_M1[15]_ is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave_M1[7]_ is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave_M1[6]_ is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave_M1[5]_ is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave_M1[4]_ is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave_M1[3]_ is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave_M1[2]_ is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave_M1[1]_ is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave_M1[0]_ is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave_M2[15]_ is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \ADC_Int1/ADC_Mem_Ave_M2[15]_ is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \ADC_Int1/ADC_Mem_Ave_M2[15]_ is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ADC_Int1/ADC_Mem_Ave_M2[15]_ is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ADC_Int1/ADC_Mem_Ave_M2[15]_ is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \ADC_Int1/ADC_Mem_Ave_M2[15]_ is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \ADC_Int1/ADC_Mem_Ave_M2[15]_ is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \ADC_Int1/ADC_Mem_Ave_M2[15]_ is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \ADC_Int1/ADC_Mem_Ave_M2[15]_ is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \ADC_Int1/ADC_Mem_Ave_M2[15]_ is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \ADC_Int1/ADC_Mem_Ave_M2[15]_ is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \ADC_Int1/ADC_Mem_Ave_M2[15]_ is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \ADC_Int1/ADC_Mem_Ave_M2[15]_ is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \ADC_Int1/ADC_Mem_Ave_M2[15]_ is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \ADC_Int1/ADC_Mem_Ave_M2[15]_ is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ADC_Int1/ADC_Mem_Ave_M2[15]_ is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave_M2[7]_ is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave_M2[6]_ is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave_M2[5]_ is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave_M2[4]_ is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave_M2[3]_ is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave_M2[2]_ is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave_M2[1]_ is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \ADC_Int1/ADC_Mem_Ave_M2[0]_ is stuck at Zero
+WARNING - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/uart_usr_int.vhd(949): Register \RS232_Usr/txbuff_i9 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/generic_components.vhd(91): Register \ADC_Int1/Bus_Int1/DataIn_reg_o__i15 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/gabriel/desktop/fpga-hw/businterface_final_ug-spring2026/businterface_uart_pwm_spi/source/pi_buck_int.vhd(190): Register \PI_Buck1/Acc_reg_o__i31 is stuck at Zero. VDB-5013
+Duplicate register/latch removal. \ADC_Int1/SPI_ROM1/data__i0 is a one-to-one match with \ADC_Int1/SPI_ROM1/data__i1.
+Duplicate register/latch removal. \ADC_Int1/SPI_ROM1/data__i2 is a one-to-one match with \ADC_Int1/SPI_ROM1/data__i0.
+Duplicate register/latch removal. \ADC_Int1/SPI_ROM1/data__i3 is a one-to-one match with \ADC_Int1/SPI_ROM1/data__i2.
+Duplicate register/latch removal. \ADC_Int1/SPI_ROM1/data__i4 is a one-to-one match with \ADC_Int1/SPI_ROM1/data__i3.
+Duplicate register/latch removal. \ADC_Int1/SPI_ROM1/data__i6 is a one-to-one match with \ADC_Int1/SPI_ROM1/data__i4.
+Duplicate register/latch removal. \ADC_Int1/SPI_ROM1/data__i7 is a one-to-one match with \ADC_Int1/SPI_ROM1/data__i6.
+Duplicate register/latch removal. \ADC_Int1/SPI_ROM1/data__i8 is a one-to-one match with \ADC_Int1/SPI_ROM1/data__i7.
+Duplicate register/latch removal. \ADC_Int1/SPI_ROM1/data__i9 is a one-to-one match with \ADC_Int1/SPI_ROM1/data__i8.
+Duplicate register/latch removal. \ADC_Int1/SPI_ROM1/data__i10 is a one-to-one match with \ADC_Int1/SPI_ROM1/data__i9.
+Duplicate register/latch removal. \ADC_Int1/SPI_ROM1/data__i11 is a one-to-one match with \ADC_Int1/SPI_ROM1/data__i10.
+Duplicate register/latch removal. \ADC_Int1/SPI_ROM1/data__i12 is a one-to-one match with \ADC_Int1/SPI_ROM1/data__i11.
+Duplicate register/latch removal. \ADC_Int1/SPI_ROM1/data__i13 is a one-to-one match with \ADC_Int1/SPI_ROM1/data__i12.
+Duplicate register/latch removal. \ADC_Int1/SPI_ROM1/data__i14 is a one-to-one match with \ADC_Int1/SPI_ROM1/data__i13.
+Duplicate register/latch removal. \ADC_Int1/SPI_ROM1/data__i15 is a one-to-one match with \ADC_Int1/SPI_ROM1/data__i14.
+Duplicate register/latch removal. \LED_Ctrll/CS_Bus_FSM_i1 is a one-to-one match with \PI_Buck1/CS_Bus_FSM_i1.
+GSR will not be inferred because no asynchronous signal was found in the netlist.
+WARNING - synthesis: Initial value found on instance \RS232_Usr/txbuff_i0 will be ignored.
+WARNING - synthesis: Initial value found on instance \RS232_Usr/i_i1 will be ignored.
+WARNING - synthesis: Initial value found on instance \RS232_Usr/i_i4 will be ignored.
+WARNING - synthesis: Initial value found on instance \RS232_Usr/i_i8 will be ignored.
+WARNING - synthesis: Initial value found on instance \RS232_Usr/i_i10 will be ignored.
+Duplicate register/latch removal. \PI_Buck1/I_reg_o__i0 is a one-to-one match with \PI_Buck1/P_reg_o__i14.
+Duplicate register/latch removal. \PI_Buck1/Err_reg_o__i15 is a one-to-one match with \PI_Buck1/Err_reg_o__i16.
+Duplicate register/latch removal. \PI_Buck1/Err_reg_o__i17 is a one-to-one match with \PI_Buck1/Err_reg_o__i15.
+Duplicate register/latch removal. \PI_Buck1/Err_reg_o__i18 is a one-to-one match with \PI_Buck1/Err_reg_o__i17.
+Duplicate register/latch removal. \PI_Buck1/Err_reg_o__i19 is a one-to-one match with \PI_Buck1/Err_reg_o__i18.
+Duplicate register/latch removal. \PI_Buck1/Err_reg_o__i20 is a one-to-one match with \PI_Buck1/Err_reg_o__i19.
+Duplicate register/latch removal. \PI_Buck1/Err_reg_o__i21 is a one-to-one match with \PI_Buck1/Err_reg_o__i20.
+Duplicate register/latch removal. \PI_Buck1/Err_reg_o__i22 is a one-to-one match with \PI_Buck1/Err_reg_o__i21.
+Duplicate register/latch removal. \PI_Buck1/Err_reg_o__i23 is a one-to-one match with \PI_Buck1/Err_reg_o__i22.
+Duplicate register/latch removal. \PI_Buck1/Err_reg_o__i24 is a one-to-one match with \PI_Buck1/Err_reg_o__i23.
+Duplicate register/latch removal. \PI_Buck1/Err_reg_o__i25 is a one-to-one match with \PI_Buck1/Err_reg_o__i24.
+Duplicate register/latch removal. \PI_Buck1/Err_reg_o__i26 is a one-to-one match with \PI_Buck1/Err_reg_o__i25.
+Duplicate register/latch removal. \PI_Buck1/Err_reg_o__i27 is a one-to-one match with \PI_Buck1/Err_reg_o__i26.
+Duplicate register/latch removal. \PI_Buck1/Err_reg_o__i28 is a one-to-one match with \PI_Buck1/Err_reg_o__i27.
+Duplicate register/latch removal. \PI_Buck1/Err_reg_o__i29 is a one-to-one match with \PI_Buck1/Err_reg_o__i28.
+Duplicate register/latch removal. \PI_Buck1/Err_reg_o__i30 is a one-to-one match with \PI_Buck1/Err_reg_o__i29.
+Duplicate register/latch removal. \PI_Buck1/Err_reg_o__i31 is a one-to-one match with \PI_Buck1/Err_reg_o__i30.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i15 is a one-to-one match with \PI_Buck1/I_reg_o__i1.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i16 is a one-to-one match with \PI_Buck1/I_reg_o__i2.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i17 is a one-to-one match with \PI_Buck1/I_reg_o__i3.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i18 is a one-to-one match with \PI_Buck1/I_reg_o__i4.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i19 is a one-to-one match with \PI_Buck1/I_reg_o__i5.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i20 is a one-to-one match with \PI_Buck1/I_reg_o__i6.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i21 is a one-to-one match with \PI_Buck1/I_reg_o__i7.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i22 is a one-to-one match with \PI_Buck1/I_reg_o__i8.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i23 is a one-to-one match with \PI_Buck1/I_reg_o__i9.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i24 is a one-to-one match with \PI_Buck1/I_reg_o__i10.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i25 is a one-to-one match with \PI_Buck1/I_reg_o__i11.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i26 is a one-to-one match with \PI_Buck1/I_reg_o__i12.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i27 is a one-to-one match with \PI_Buck1/I_reg_o__i13.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i28 is a one-to-one match with \PI_Buck1/I_reg_o__i14.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i29 is a one-to-one match with \PI_Buck1/I_reg_o__i15.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i30 is a one-to-one match with \PI_Buck1/I_reg_o__i16.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i31 is a one-to-one match with \PI_Buck1/I_reg_o__i17.
+Duplicate register/latch removal. \PI_Buck1/I_reg_o__i18 is a one-to-one match with \PI_Buck1/P_reg_o__i31.
+Duplicate register/latch removal. \PI_Buck1/I_reg_o__i19 is a one-to-one match with \PI_Buck1/I_reg_o__i18.
+Duplicate register/latch removal. \PI_Buck1/I_reg_o__i20 is a one-to-one match with \PI_Buck1/I_reg_o__i19.
+Duplicate register/latch removal. \PI_Buck1/I_reg_o__i21 is a one-to-one match with \PI_Buck1/I_reg_o__i20.
+Duplicate register/latch removal. \PI_Buck1/I_reg_o__i22 is a one-to-one match with \PI_Buck1/I_reg_o__i21.
+Duplicate register/latch removal. \PI_Buck1/I_reg_o__i23 is a one-to-one match with \PI_Buck1/I_reg_o__i22.
+Duplicate register/latch removal. \PI_Buck1/I_reg_o__i24 is a one-to-one match with \PI_Buck1/I_reg_o__i23.
+Duplicate register/latch removal. \PI_Buck1/I_reg_o__i25 is a one-to-one match with \PI_Buck1/I_reg_o__i24.
+Duplicate register/latch removal. \PI_Buck1/I_reg_o__i26 is a one-to-one match with \PI_Buck1/I_reg_o__i25.
+Duplicate register/latch removal. \PI_Buck1/I_reg_o__i27 is a one-to-one match with \PI_Buck1/I_reg_o__i26.
+Duplicate register/latch removal. \PI_Buck1/I_reg_o__i28 is a one-to-one match with \PI_Buck1/I_reg_o__i27.
+Duplicate register/latch removal. \PI_Buck1/I_reg_o__i29 is a one-to-one match with \PI_Buck1/I_reg_o__i28.
+Duplicate register/latch removal. \PI_Buck1/I_reg_o__i30 is a one-to-one match with \PI_Buck1/I_reg_o__i29.
+Duplicate register/latch removal. \PI_Buck1/I_reg_o__i31 is a one-to-one match with \PI_Buck1/I_reg_o__i30.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i15 is a one-to-one match with \PI_Buck1/I_reg_o__i31.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i16 is a one-to-one match with \PI_Buck1/P_reg_o__i30.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i17 is a one-to-one match with \PI_Buck1/P_reg_o__i29.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i18 is a one-to-one match with \PI_Buck1/P_reg_o__i28.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i19 is a one-to-one match with \PI_Buck1/P_reg_o__i27.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i20 is a one-to-one match with \PI_Buck1/P_reg_o__i26.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i21 is a one-to-one match with \PI_Buck1/P_reg_o__i25.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i22 is a one-to-one match with \PI_Buck1/P_reg_o__i24.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i23 is a one-to-one match with \PI_Buck1/P_reg_o__i22.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i15 is a one-to-one match with \PI_Buck1/P_reg_o__i23.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i16 is a one-to-one match with \PI_Buck1/P_reg_o__i21.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i17 is a one-to-one match with \PI_Buck1/P_reg_o__i20.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i18 is a one-to-one match with \PI_Buck1/P_reg_o__i19.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i15 is a one-to-one match with \PI_Buck1/P_reg_o__i18.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i16 is a one-to-one match with \PI_Buck1/P_reg_o__i17.
+Duplicate register/latch removal. \PI_Buck1/P_reg_o__i15 is a one-to-one match with \PI_Buck1/P_reg_o__i16.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in Bus_Interface_Top_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/se5c00/data/se5clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file BusInterface_Final_UG_BusInterface_UART_PWM_SPI.ngd.
+
+################### Begin Area Report (Bus_Interface_Top)######################
+Number of register bits => 1702 of 10021 (16 % )
+CCU2D => 390
+DP8KC => 2
+EHXPLLJ => 1
+FD1P3AX => 30
+FD1P3AY => 7
+FD1P3DX => 16
+FD1P3IX => 1114
+FD1P3JX => 4
+FD1S3AX => 82
+FD1S3AY => 2
+FD1S3IX => 430
+FD1S3JX => 17
+GSR => 1
+IB => 2
+INV => 7
+L6MUX21 => 221
+LUT4 => 1849
+MUX21 => 16
+OB => 15
+PFUMX => 342
+ROM16X1A => 192
+SP8KC => 1
+SPR16X4C => 256
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+OSCJ("8.31")(1,4) => 1
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 3
+  Net : PLL_1/clk, loads : 1500
+  Net : ADC_Int1/ADC_SCLK_c, loads : 454
+  Net : OSC_Out, loads : 12
+Clock Enable Nets
+Number of Clock Enables: 78
+Top 10 highest fanout Clock Enables:
+  Net : ADC_Int1/ADC_SCLK_c_enable_301, loads : 50
+  Net : ADC_Int1/ADC_SCLK_c_enable_351, loads : 50
+  Net : RS232_Usr/clk_enable_182, loads : 33
+  Net : ADC_Int1/ADC_Ave_Ld, loads : 20
+  Net : RS232_Usr/clk_enable_57, loads : 16
+  Net : RS232_Usr/clk_enable_279, loads : 16
+  Net : ADC_Int1/SPI_PS/ADC_SCLK_c_enable_395, loads : 16
+  Net : ADC_Int1/ADC_SCLK_c_enable_144, loads : 12
+  Net : ADC_Int1/ADC_SCLK_c_enable_122, loads : 12
+  Net : ADC_Int1/ADC_SCLK_c_enable_155, loads : 12
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : RS232_Usr/n26942, loads : 1093
+  Net : BM/Mem1_addra_4, loads : 545
+  Net : BM/Mem1_addra_5, loads : 289
+  Net : BM/Mem1_addra_6, loads : 161
+  Net : RS232_Usr/ADC_Mem_Temp_15__15__N_3105, loads : 127
+  Net : RS232_Usr/CS_FIFO_Bus_3, loads : 115
+  Net : System_rst, loads : 114
+  Net : RS232_Usr/CS_FIFO_Bus_2, loads : 103
+  Net : BM/Mem1_addra_0, loads : 98
+  Net : BM/Mem1_addra_1, loads : 98
+################### End Clock Report ##################
+
+<A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets clk]                     |  200.000 MHz|   61.889 MHz|    17 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets OSC_Out]                 |  200.000 MHz|  274.198 MHz|     6  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets ADC_SCLK_c]              |  200.000 MHz|  107.434 MHz|     7 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+
+Peak Memory Usage: 154.453  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 7.781  secs
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

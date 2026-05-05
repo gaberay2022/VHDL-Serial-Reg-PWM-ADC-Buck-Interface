@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE		ispXCF	SYSTEM	"IspXCF.dtd" >
+<ispXCF version="3.12">
+	<Comment></Comment>
+	<Chain>
+		<Comm>JTAG</Comm>
+		<Device>
+			<SelectedProg value="TRUE"/>
+			<Pos>1</Pos>
+			<Vendor>Lattice</Vendor>
+			<Family>MachXO3D</Family>
+			<Name>LCMXO3D-9400HC</Name>
+			<IDCode>0x212e3043</IDCode>
+			<Package>All</Package>
+			<PON>LCMXO3D-9400HC</PON>
+			<Bypass>
+				<InstrLen>8</InstrLen>
+				<InstrVal>11111111</InstrVal>
+				<BScanLen>1</BScanLen>
+				<BScanVal>0</BScanVal>
+			</Bypass>
+			<File>C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Spring2026/BusInterface_UART_PWM_SPI/BusInterface_Final_UG_BusInterface_UART_PWM_SPI_a.jed</File>
+			<FileTime>05/03/26 21:26:20</FileTime>
+			<JedecChecksum>0x7087</JedecChecksum>
+			<Operation>FLASH Erase,Program,Verify</Operation>
+			<NVSector	selected="TRUE">
+				<SectorIndex>1</SectorIndex>
+				<SectorName>FlashA</SectorName>
+				<SectorFile>C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Spring2026/BusInterface_UART_PWM_SPI/BusInterface_Final_UG_BusInterface_UART_PWM_SPI_a.jed</SectorFile>
+				<SectorOper>FLASH Erase,Program,Verify</SectorOper>
+			</NVSector>
+			<Option>
+				<SVFVendor>JTAG STANDARD</SVFVendor>
+				<IOState>HighZ</IOState>
+				<PreloadLength>760</PreloadLength>
+				<IOVectorData>0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</IOVectorData>
+				<SVFProcessor>SVF Processor</SVFProcessor>
+				<Usercode>0x00000000</Usercode>
+				<AccessMode>FLASH</AccessMode>
+			</Option>
+		</Device>
+	</Chain>
+	<ProjectOptions>
+		<Program>SEQUENTIAL</Program>
+		<Process>ENTIRED CHAIN</Process>
+		<OperationOverride>No Override</OperationOverride>
+		<StartTAP>TLR</StartTAP>
+		<EndTAP>TLR</EndTAP>
+		<VerifyUsercode value="FALSE"/>
+		<TCKDelay>1</TCKDelay>
+	</ProjectOptions>
+	<CableOptions>
+		<CableName>USB2</CableName>
+		<PortAdd>FTUSB-0</PortAdd>
+		<USBID>Lattice XO3D Breakout Board A Location 0000 Serial DiB6KDGWA</USBID>
+	</CableOptions>
+</ispXCF>

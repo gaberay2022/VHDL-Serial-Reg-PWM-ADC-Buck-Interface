@@ -1,0 +1,333 @@
+
+Loading design for application trce from file businterface_final_ug_businterface_uart_pwm_spi_map.ncd.
+Design name: Bus_Interface_Top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-9400HC
+Package:     CABGA256
+Performance: 6
+Loading device for application trce from file 'se5c9400.nph' in environment: C:/lscc/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 7.
+Performance Hardware Data Status:   Final          Version 2.2.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
+Tue May 05 14:54:29 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o BusInterface_Final_UG_BusInterface_UART_PWM_SPI.tw1 -gui -msgset C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Spring2026/promote.xml BusInterface_Final_UG_BusInterface_UART_PWM_SPI_map.ncd BusInterface_Final_UG_BusInterface_UART_PWM_SPI.prf 
+Design file:     businterface_final_ug_businterface_uart_pwm_spi_map.ncd
+Preference file: businterface_final_ug_businterface_uart_pwm_spi.prf
+Device,speed:    LCMXO3D-9400HC,6
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "OSC_Out" 8.310000 MHz ;
+            67 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 117.228ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              Reset_Cnt/temp__i5  (from OSC_Out +)
+   Destination:    FF         Data in        Reset_Cnt_INC_21  (to OSC_Out +)
+
+   Delay:               2.976ns  (39.8% logic, 60.2% route), 3 logic levels.
+
+ Constraint Details:
+
+      2.976ns physical path delay Reset_Cnt/SLICE_300 to SLICE_1859 meets
+    120.337ns delay constraint less
+      0.133ns DIN_SET requirement (totaling 120.204ns) by 117.228ns
+
+ Physical Path Details:
+
+      Data path Reset_Cnt/SLICE_300 to SLICE_1859:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.367 *SLICE_300.CLK to */SLICE_300.Q0 Reset_Cnt/SLICE_300 (from OSC_Out)
+ROUTE         2   e 0.896 */SLICE_300.Q0 to  SLICE_1862.B1 Reset_Cnt_Out_5
+CTOF_DEL    ---     0.408  SLICE_1862.B1 to  SLICE_1862.F1 SLICE_1862
+ROUTE         2   e 0.896  SLICE_1862.F1 to  SLICE_1859.C0 n12
+CTOF_DEL    ---     0.408  SLICE_1859.C0 to  SLICE_1859.F0 SLICE_1859
+ROUTE         1   e 0.001  SLICE_1859.F0 to SLICE_1859.DI0 System_rst_N_10 (to OSC_Out)
+                  --------
+                    2.976   (39.8% logic, 60.2% route), 3 logic levels.
+
+Report:  321.647MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk" 24.930000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 22.926ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              RS232_Usr/Rcv_Cnt/temp__i3  (from clk +)
+   Destination:    FF         Data in        RS232_Usr/Chk_Sum_reg_o_i0_i7  (to clk +)
+
+   Delay:              17.053ns  (36.9% logic, 63.1% route), 16 logic levels.
+
+ Constraint Details:
+
+     17.053ns physical path delay RS232_Usr/Rcv_Cnt/SLICE_296 to RS232_Usr/SLICE_1720 meets
+     40.112ns delay constraint less
+      0.133ns DIN_SET requirement (totaling 39.979ns) by 22.926ns
+
+ Physical Path Details:
+
+      Data path RS232_Usr/Rcv_Cnt/SLICE_296 to RS232_Usr/SLICE_1720:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.367 *SLICE_296.CLK to */SLICE_296.Q0 RS232_Usr/Rcv_Cnt/SLICE_296 (from clk)
+ROUTE        12   e 0.896 */SLICE_296.Q0 to *SLICE_2476.A0 RS232_Usr/RAM_address_7_N_826_4
+CTOF_DEL    ---     0.408 *SLICE_2476.A0 to *SLICE_2476.F0 RS232_Usr/SLICE_2476
+ROUTE         1   e 0.896 *SLICE_2476.F0 to *SLICE_2275.B0 RS232_Usr/n26869
+CTOF_DEL    ---     0.408 *SLICE_2275.B0 to *SLICE_2275.F0 RS232_Usr/SLICE_2275
+ROUTE         1   e 0.896 *SLICE_2275.F0 to *SLICE_2267.D1 RS232_Usr/n24320
+CTOF_DEL    ---     0.408 *SLICE_2267.D1 to *SLICE_2267.F1 RS232_Usr/SLICE_2267
+ROUTE         1   e 0.896 *SLICE_2267.F1 to *SLICE_1939.M0 RS232_Usr/n24331
+MTOOFX_DEL  ---     0.313 *SLICE_1939.M0 to *ICE_1939.OFX0 RS232_Usr/Rcv_Cnt_Out_7__I_0_i16/SLICE_1939
+ROUTE         1   e 0.896 *ICE_1939.OFX0 to *SLICE_1936.D1 RS232_Usr/LD_Chk_Sum_N_943
+CTOOFX_DEL  ---     0.601 *SLICE_1936.D1 to *ICE_1936.OFX0 RS232_Usr/i18581/SLICE_1936
+ROUTE         3   e 0.896 *ICE_1936.OFX0 to *SLICE_2254.A1 RS232_Usr/n24015
+CTOF_DEL    ---     0.408 *SLICE_2254.A1 to *SLICE_2254.F1 RS232_Usr/SLICE_2254
+ROUTE        20   e 0.896 *SLICE_2254.F1 to *SLICE_2247.B1 RS232_Usr/LD_Chk_Sum
+CTOF_DEL    ---     0.408 *SLICE_2247.B1 to *SLICE_2247.F1 RS232_Usr/SLICE_2247
+ROUTE         8   e 0.896 *SLICE_2247.F1 to *SLICE_1929.M0 RS232_Usr/n6275
+MTOOFX_DEL  ---     0.313 *SLICE_1929.M0 to *ICE_1929.OFX0 RS232_Usr/mux_2741_i2/SLICE_1929
+ROUTE         1   e 0.896 *ICE_1929.OFX0 to *SLICE_2278.B1 RS232_Usr/n6942
+CTOF_DEL    ---     0.408 *SLICE_2278.B1 to *SLICE_2278.F1 RS232_Usr/SLICE_2278
+ROUTE         2   e 0.896 *SLICE_2278.F1 to *SLICE_1831.C0 RS232_Usr/n9592
+CTOF_DEL    ---     0.408 *SLICE_1831.C0 to *SLICE_1831.F0 RS232_Usr/SLICE_1831
+ROUTE         1   e 0.896 *SLICE_1831.F0 to */SLICE_236.C1 RS232_Usr/n14596
+C1TOFCO_DE  ---     0.684 */SLICE_236.C1 to *SLICE_236.FCO RS232_Usr/SLICE_236
+ROUTE         1   e 0.001 *SLICE_236.FCO to *SLICE_234.FCI RS232_Usr/n20794
+FCITOFCO_D  ---     0.130 *SLICE_234.FCI to *SLICE_234.FCO RS232_Usr/SLICE_234
+ROUTE         1   e 0.001 *SLICE_234.FCO to *SLICE_233.FCI RS232_Usr/n20795
+FCITOFCO_D  ---     0.130 *SLICE_233.FCI to *SLICE_233.FCO RS232_Usr/SLICE_233
+ROUTE         1   e 0.001 *SLICE_233.FCO to *SLICE_231.FCI RS232_Usr/n20796
+FCITOF1_DE  ---     0.495 *SLICE_231.FCI to */SLICE_231.F1 RS232_Usr/SLICE_231
+ROUTE         1   e 0.896 */SLICE_231.F1 to *SLICE_1720.D1 RS232_Usr/n6128
+CTOF_DEL    ---     0.408 *SLICE_1720.D1 to *SLICE_1720.F1 RS232_Usr/SLICE_1720
+ROUTE         1   e 0.001 *SLICE_1720.F1 to *LICE_1720.DI1 RS232_Usr/n6094 (to clk)
+                  --------
+                   17.053   (36.9% logic, 63.1% route), 16 logic levels.
+
+Report:   58.187MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "OSC_Out" 8.310000 MHz ;  |    8.310 MHz|  321.647 MHz|   3  
+                                        |             |             |
+FREQUENCY NET "clk" 24.930000 MHz ;     |   24.930 MHz|   58.187 MHz|  16  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 3 clocks:
+
+Clock Domain: clk   Source: PLL_1/PLLInst_0.CLKOP   Loads: 1203
+   Covered under: FREQUENCY NET "clk" 24.930000 MHz ;
+
+   Data transfers from:
+   Clock Domain: OSC_Out   Source: Int_OSC.OSC
+      Covered under: FREQUENCY NET "clk" 24.930000 MHz ;   Transfers: 1
+
+   Clock Domain: ADC_SCLK_c   Source: ADC_Int1/SLICE_1431.Q1
+      Covered under: FREQUENCY NET "clk" 24.930000 MHz ;   Transfers: 147
+
+Clock Domain: OSC_Out   Source: Int_OSC.OSC   Loads: 9
+   Covered under: FREQUENCY NET "OSC_Out" 8.310000 MHz ;
+
+Clock Domain: ADC_SCLK_c   Source: ADC_Int1/SLICE_1431.Q1   Loads: 246
+   No transfer within this clock domain is found
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 42002 paths, 2 nets, and 20113 connections (86.94% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
+Tue May 05 14:54:29 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o BusInterface_Final_UG_BusInterface_UART_PWM_SPI.tw1 -gui -msgset C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Spring2026/promote.xml BusInterface_Final_UG_BusInterface_UART_PWM_SPI_map.ncd BusInterface_Final_UG_BusInterface_UART_PWM_SPI.prf 
+Design file:     businterface_final_ug_businterface_uart_pwm_spi_map.ncd
+Preference file: businterface_final_ug_businterface_uart_pwm_spi.prf
+Device,speed:    LCMXO3D-9400HC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "OSC_Out" 8.310000 MHz ;
+            67 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.447ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              Reset_Cnt/temp__i3  (from OSC_Out +)
+   Destination:    FF         Data in        Reset_Cnt/temp__i3  (to OSC_Out +)
+
+   Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.434ns physical path delay Reset_Cnt/SLICE_301 to Reset_Cnt/SLICE_301 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
+
+ Physical Path Details:
+
+      Data path Reset_Cnt/SLICE_301 to Reset_Cnt/SLICE_301:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_301.CLK to */SLICE_301.Q0 Reset_Cnt/SLICE_301 (from OSC_Out)
+ROUTE         2   e 0.199 */SLICE_301.Q0 to */SLICE_301.A0 Reset_Cnt_Out_3
+CTOF_DEL    ---     0.101 */SLICE_301.A0 to */SLICE_301.F0 Reset_Cnt/SLICE_301
+ROUTE         1   e 0.001 */SLICE_301.F0 to *SLICE_301.DI0 Reset_Cnt/n9 (to OSC_Out)
+                  --------
+                    0.434   (53.9% logic, 46.1% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk" 24.930000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.351ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ADC_Int1/clk_temp2_2926_3191__i2  (from clk +)
+   Destination:    FF         Data in        ADC_Int1/clk_SPI_437  (to clk +)
+
+   Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.332ns physical path delay ADC_Int1/SLICE_1431 to ADC_Int1/SLICE_1431 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
+
+ Physical Path Details:
+
+      Data path ADC_Int1/SLICE_1431 to ADC_Int1/SLICE_1431:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *LICE_1431.CLK to *SLICE_1431.Q0 ADC_Int1/SLICE_1431 (from clk)
+ROUTE         2   e 0.199 *SLICE_1431.Q0 to *SLICE_1431.M1 ADC_Int1/clk_temp2_2 (to clk)
+                  --------
+                    0.332   (40.1% logic, 59.9% route), 1 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "OSC_Out" 8.310000 MHz ;  |     0.000 ns|     0.447 ns|   2  
+                                        |             |             |
+FREQUENCY NET "clk" 24.930000 MHz ;     |     0.000 ns|     0.351 ns|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 3 clocks:
+
+Clock Domain: clk   Source: PLL_1/PLLInst_0.CLKOP   Loads: 1203
+   Covered under: FREQUENCY NET "clk" 24.930000 MHz ;
+
+   Data transfers from:
+   Clock Domain: OSC_Out   Source: Int_OSC.OSC
+      Covered under: FREQUENCY NET "clk" 24.930000 MHz ;   Transfers: 1
+
+   Clock Domain: ADC_SCLK_c   Source: ADC_Int1/SLICE_1431.Q1
+      Covered under: FREQUENCY NET "clk" 24.930000 MHz ;   Transfers: 147
+
+Clock Domain: OSC_Out   Source: Int_OSC.OSC   Loads: 9
+   Covered under: FREQUENCY NET "OSC_Out" 8.310000 MHz ;
+
+Clock Domain: ADC_SCLK_c   Source: ADC_Int1/SLICE_1431.Q1   Loads: 246
+   No transfer within this clock domain is found
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 42002 paths, 2 nets, and 21135 connections (91.36% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

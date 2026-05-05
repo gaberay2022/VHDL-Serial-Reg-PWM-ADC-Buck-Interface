@@ -1,0 +1,431 @@
+----------------------------------------------------------------------
+Report for cell Bus_Interface_Top.TECH
+Register bits:  1702 of 10021 (16.984%)
+I/O cells:      17
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D       390          100.0
+                              DP8KC         2          100.0
+                            EHXPLLJ         1          100.0
+                            FD1P3AX        30          100.0
+                            FD1P3AY         7          100.0
+                            FD1P3DX        16          100.0
+                            FD1P3IX      1114          100.0
+                            FD1P3JX         4          100.0
+                            FD1S3AX        82          100.0
+                            FD1S3AY         2          100.0
+                            FD1S3IX       430          100.0
+                            FD1S3JX        17          100.0
+                                GSR         1          100.0
+                                 IB         2          100.0
+                                INV         7          100.0
+                            L6MUX21       221          100.0
+                               LUT4      1849          100.0
+                              MUX21        16          100.0
+                                 OB        15          100.0
+                              PFUMX       342          100.0
+                           ROM16X1A       192          100.0
+                              SP8KC         1          100.0
+                           SPR16X4C       256          100.0
+SUB MODULES
+                            ADC_Int         1
+                     Bus_Int(16,16)         1
+                 Bus_Int(16,16)_U15         1
+                  Bus_Int(16,16)_U2         1
+                  Bus_Int(16,16)_U8         1
+                         Bus_Master         1
+                           LED_Ctrl         1
+                            PI_Buck         1
+                            PLL_Clk         1
+       RS232_Usr_Int(9600,24930000)         1
+                            SPI_ROM         1
+                              SPRAM         1
+                  STD_FIFO(8,512,9)         1
+               STD_FIFO(8,512,9)_U0         1
+                         Sreg_PS_16         1
+                         Sreg_SP_16         1
+                    Std_Counter(16)         1
+                Std_Counter(16)_U11         1
+                Std_Counter(16)_U12         1
+                Std_Counter(16)_U16         1
+                 Std_Counter(16)_U3         1
+                 Std_Counter(16)_U4         1
+                 Std_Counter(16)_U5         1
+                 Std_Counter(16)_U6         1
+                 Std_Counter(16)_U9         1
+                     Std_Counter(8)         1
+                  Std_Counter(8)_U1         1
+                 Std_Counter(8)_U10         1
+                 Std_Counter(8)_U13         1
+                 Std_Counter(8)_U14         1
+                 Std_Counter(8)_U17         1
+                 Std_Counter(8)_U18         1
+                  Std_Counter(8)_U7         1
+                              TOTAL      5030
+----------------------------------------------------------------------
+Report for cell PI_Buck.v1
+Instance Path : PI_Buck1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        81           20.8
+                            FD1P3AX         1            3.3
+                            FD1P3IX       234           21.0
+                            FD1S3IX        20            4.7
+                            FD1S3JX         1            5.9
+                               LUT4       162            8.8
+SUB MODULES
+                  Bus_Int(16,16)_U2         1
+                    Std_Counter(16)         1
+                  Std_Counter(8)_U1         1
+                              TOTAL       502
+----------------------------------------------------------------------
+Report for cell Std_Counter(8)_U1.v1
+Instance Path : PI_Buck1.Delay_Cnt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         5            1.3
+                            FD1P3IX         8            0.7
+                              TOTAL        13
+----------------------------------------------------------------------
+Report for cell Bus_Int(16,16)_U2.v1
+Instance Path : PI_Buck1.Bus_Int1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX         1            3.3
+                            FD1P3IX        35            3.1
+                            FD1S3IX         4            0.9
+                            FD1S3JX         1            5.9
+                               LUT4        64            3.5
+                              TOTAL       105
+----------------------------------------------------------------------
+Report for cell Std_Counter(16).v1
+Instance Path : PI_Buck1.Bus_Cnt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            2.3
+                            FD1P3IX        16            1.4
+                              TOTAL        25
+----------------------------------------------------------------------
+Report for cell ADC_Int.v1
+Instance Path : ADC_Int1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D       111           28.5
+                            FD1P3AX         1            3.3
+                            FD1P3IX       474           42.5
+                            FD1S3AX         5            6.1
+                            FD1S3IX       281           65.3
+                            FD1S3JX         3           17.6
+                                INV         1           14.3
+                            L6MUX21        15            6.8
+                               LUT4       249           13.5
+                              PFUMX        31            9.1
+SUB MODULES
+                 Bus_Int(16,16)_U15         1
+                            SPI_ROM         1
+                         Sreg_PS_16         1
+                         Sreg_SP_16         1
+                Std_Counter(16)_U11         1
+                Std_Counter(16)_U12         1
+                Std_Counter(16)_U16         1
+                 Std_Counter(8)_U10         1
+                 Std_Counter(8)_U13         1
+                 Std_Counter(8)_U14         1
+                 Std_Counter(8)_U17         1
+                              TOTAL      1182
+----------------------------------------------------------------------
+Report for cell Std_Counter(8)_U10.v1
+Instance Path : ADC_Int1.Setup_Cnt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         5            1.3
+                            FD1P3IX         8            0.7
+                              TOTAL        13
+----------------------------------------------------------------------
+Report for cell Sreg_SP_16.v1
+Instance Path : ADC_Int1.SPI_SP
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3IX        15            1.3
+                            FD1S3IX        15            3.5
+                               LUT4         4            0.2
+                              TOTAL        34
+----------------------------------------------------------------------
+Report for cell SPI_ROM.v1
+Instance Path : ADC_Int1.SPI_ROM1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX         1            1.2
+                            FD1S3IX         1            0.2
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell Sreg_PS_16.v1
+Instance Path : ADC_Int1.SPI_PS
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX         1            3.3
+                            FD1P3IX        15            1.3
+                            FD1S3IX         1            0.2
+                               LUT4         5            0.3
+                              TOTAL        22
+----------------------------------------------------------------------
+Report for cell Std_Counter(16)_U11.v1
+Instance Path : ADC_Int1.SPI_Loop_Cnt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            2.3
+                            FD1P3IX        16            1.4
+                              TOTAL        25
+----------------------------------------------------------------------
+Report for cell Std_Counter(16)_U12.v1
+Instance Path : ADC_Int1.SPI_Cnt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            2.3
+                            FD1P3IX        16            1.4
+                               LUT4        11            0.6
+                              TOTAL        36
+----------------------------------------------------------------------
+Report for cell Std_Counter(8)_U13.v1
+Instance Path : ADC_Int1.Prg_Cnt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         5            1.3
+                            FD1P3IX         8            0.7
+                              TOTAL        13
+----------------------------------------------------------------------
+Report for cell Std_Counter(8)_U14.v1
+Instance Path : ADC_Int1.Mem_Cnt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         5            1.3
+                            FD1P3IX         8            0.7
+                              TOTAL        13
+----------------------------------------------------------------------
+Report for cell Bus_Int(16,16)_U15.v1
+Instance Path : ADC_Int1.Bus_Int1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3IX        20            1.8
+                            FD1S3IX         2            0.5
+                            FD1S3JX         1            5.9
+                               LUT4         3            0.2
+                              TOTAL        26
+----------------------------------------------------------------------
+Report for cell Std_Counter(16)_U16.v1
+Instance Path : ADC_Int1.Bus_Cnt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            2.3
+                            FD1P3IX        16            1.4
+                               LUT4         3            0.2
+                              TOTAL        28
+----------------------------------------------------------------------
+Report for cell Std_Counter(8)_U17.v1
+Instance Path : ADC_Int1.Ave_Cnt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         5            1.3
+                            FD1P3IX         8            0.7
+                               LUT4         5            0.3
+                              TOTAL        18
+----------------------------------------------------------------------
+Report for cell PLL_Clk.v1
+Instance Path : PLL_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            EHXPLLJ         1          100.0
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell RS232_Usr_Int(9600,24930000).v1
+Instance Path : RS232_Usr
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D       107           27.4
+                              DP8KC         2          100.0
+                            FD1P3AX        24           80.0
+                            FD1P3AY         7          100.0
+                            FD1P3IX       219           19.7
+                            FD1P3JX         4          100.0
+                            FD1S3AX        72           87.8
+                            FD1S3AY         2          100.0
+                            FD1S3IX        32            7.4
+                            FD1S3JX         7           41.2
+                            L6MUX21        10            4.5
+                               LUT4       662           35.8
+                              PFUMX        46           13.5
+                              SP8KC         1          100.0
+SUB MODULES
+                     Bus_Int(16,16)         1
+                  STD_FIFO(8,512,9)         1
+               STD_FIFO(8,512,9)_U0         1
+                     Std_Counter(8)         1
+                              TOTAL      1199
+----------------------------------------------------------------------
+Report for cell STD_FIFO(8,512,9).v1
+Instance Path : RS232_Usr.STD_FIFO_W
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            4.1
+                              DP8KC         1           50.0
+                            FD1P3AX         8           26.7
+                            FD1P3IX        10            0.9
+                            FD1P3JX         1           25.0
+                            FD1S3AX        36           43.9
+                               LUT4        24            1.3
+                              TOTAL        96
+----------------------------------------------------------------------
+Report for cell STD_FIFO(8,512,9)_U0.v1
+Instance Path : RS232_Usr.STD_FIFO_R
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            4.1
+                              DP8KC         1           50.0
+                            FD1P3AX         8           26.7
+                            FD1P3IX        11            1.0
+                            FD1P3JX         1           25.0
+                            FD1S3AX        36           43.9
+                               LUT4        27            1.5
+                              TOTAL       100
+----------------------------------------------------------------------
+Report for cell Std_Counter(8).v1
+Instance Path : RS232_Usr.Rcv_Cnt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         5            1.3
+                            FD1P3IX         8            0.7
+                               LUT4         3            0.2
+                              TOTAL        16
+----------------------------------------------------------------------
+Report for cell Bus_Int(16,16).v1
+Instance Path : RS232_Usr.Bus_Int1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3IX        42            3.8
+                            FD1S3IX         4            0.9
+                            FD1S3JX         1            5.9
+                               LUT4        21            1.1
+                              TOTAL        68
+----------------------------------------------------------------------
+Report for cell Std_Counter(8)_U18.v1
+Instance Path : Reset_Cnt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         5            1.3
+                            FD1P3IX         8            0.7
+                              TOTAL        13
+----------------------------------------------------------------------
+Report for cell Bus_Master.v1
+Instance Path : BM
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX         4           13.3
+                            FD1P3DX        16          100.0
+                            FD1P3IX        38            3.4
+                            FD1S3AX         1            1.2
+                            FD1S3IX         6            1.4
+                            FD1S3JX         1            5.9
+                                INV         6           85.7
+                            L6MUX21       192           86.9
+                               LUT4       554           30.0
+                              MUX21        16          100.0
+                              PFUMX       256           74.9
+                           ROM16X1A       192          100.0
+                           SPR16X4C       256          100.0
+SUB MODULES
+                              SPRAM         1
+                              TOTAL      1539
+----------------------------------------------------------------------
+Report for cell SPRAM.v1
+Instance Path : BM.Mem1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3DX        16          100.0
+                                INV         6           85.7
+                            L6MUX21       192           86.9
+                               LUT4       544           29.4
+                              MUX21        16          100.0
+                              PFUMX       256           74.9
+                           ROM16X1A       192          100.0
+                           SPR16X4C       256          100.0
+                              TOTAL      1478
+----------------------------------------------------------------------
+Report for cell LED_Ctrl.v1
+Instance Path : LED_Ctrll
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        86           22.1
+                            FD1P3IX       141           12.7
+                            FD1S3AX         1            1.2
+                            FD1S3IX        91           21.2
+                            FD1S3JX         5           29.4
+                            L6MUX21         4            1.8
+                               LUT4       203           11.0
+                              PFUMX         9            2.6
+SUB MODULES
+                  Bus_Int(16,16)_U8         1
+                 Std_Counter(16)_U3         1
+                 Std_Counter(16)_U4         1
+                 Std_Counter(16)_U5         1
+                 Std_Counter(16)_U6         1
+                 Std_Counter(16)_U9         1
+                  Std_Counter(8)_U7         1
+                              TOTAL       547
+----------------------------------------------------------------------
+Report for cell Std_Counter(16)_U3.v1
+Instance Path : LED_Ctrll.PWM4_Cnt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            2.3
+                            FD1S3IX        16            3.7
+                              TOTAL        25
+----------------------------------------------------------------------
+Report for cell Std_Counter(16)_U4.v1
+Instance Path : LED_Ctrll.PWM3_Cnt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            2.3
+                            FD1S3IX        16            3.7
+                              TOTAL        25
+----------------------------------------------------------------------
+Report for cell Std_Counter(16)_U5.v1
+Instance Path : LED_Ctrll.PWM2_Cnt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            2.3
+                            FD1S3IX        16            3.7
+                              TOTAL        25
+----------------------------------------------------------------------
+Report for cell Std_Counter(16)_U6.v1
+Instance Path : LED_Ctrll.PWM1_Cnt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            2.3
+                            FD1S3IX        16            3.7
+                              TOTAL        25
+----------------------------------------------------------------------
+Report for cell Std_Counter(8)_U7.v1
+Instance Path : LED_Ctrll.Delay_Cnt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         5            1.3
+                            FD1P3IX         8            0.7
+                              TOTAL        13
+----------------------------------------------------------------------
+Report for cell Bus_Int(16,16)_U8.v1
+Instance Path : LED_Ctrll.Bus_Int1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3IX        21            1.9
+                            FD1S3IX         2            0.5
+                            FD1S3JX         1            5.9
+                               LUT4         8            0.4
+                              TOTAL        32
+----------------------------------------------------------------------
+Report for cell Std_Counter(16)_U9.v1
+Instance Path : LED_Ctrll.Bus_Cnt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            2.3
+                            FD1P3IX        16            1.4
+                              TOTAL        25

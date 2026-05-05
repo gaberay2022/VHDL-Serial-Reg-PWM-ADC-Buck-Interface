@@ -1,0 +1,4 @@
+#Start recording tcl command: 4/25/2023 20:52:11
+#Project Location: C:/NCREPT_Git/NCREPT_Classes/P4PE/FPGA/P4PE-FPGA_BusInterface_Final_UG; Project name: BusInterface_Final_UG
+prj_project open "C:/NCREPT_Git/NCREPT_Classes/P4PE/FPGA/P4PE-FPGA_BusInterface_Final_UG/BusInterface_Final_UG.ldf"
+#Stop recording: 4/25/2023 20:59:06

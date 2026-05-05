@@ -1,0 +1,1194 @@
+
+      Lattice Mapping Report File for Design Module 'Bus_Interface_Top'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO3D -p LCMXO3D-9400HC -t CABGA256 -s 6 -oc
+     Commercial BusInterface_Final_UG_BusInterface_UART_PWM_SPI.ngd -o
+     BusInterface_Final_UG_BusInterface_UART_PWM_SPI_map.ncd -pr
+     BusInterface_Final_UG_BusInterface_UART_PWM_SPI.prf -mp
+     BusInterface_Final_UG_BusInterface_UART_PWM_SPI.mrp -lpf C:/Users/Gabriel/D
+     esktop/FPGA-HW/BusInterface_Final_UG-Spring2026/BusInterface_UART_PWM_SPI/B
+     usInterface_Final_UG_BusInterface_UART_PWM_SPI.lpf -lpf C:/Users/Gabriel/De
+     sktop/FPGA-HW/BusInterface_Final_UG-Spring2026/BusInterface_Final_UG.lpf -c
+     0 -gui -msgset C:/Users/Gabriel/Desktop/FPGA-HW/BusInterface_Final_UG-Sprin
+     g2026/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO3D-9400HCCABGA256
+Target Performance:   6
+Mapper:  se5c00,  version:  Diamond (64-bit) 3.13.0.56.2
+Mapped on:  05/05/26  14:54:26
+
+Design Summary
+--------------
+
+   Number of registers:   1702 out of 10021 (17%)
+      PFU registers:         1702 out of  9400 (18%)
+      PIO registers:            0 out of   621 (0%)
+   Number of SLICEs:      2166 out of  4700 (46%)
+      SLICEs as Logic/ROM:   1398 out of  4700 (30%)
+      SLICEs as RAM:          768 out of  3525 (22%)
+      SLICEs as Carry:        390 out of  4700 (8%)
+   Number of LUT4s:        4291 out of  9400 (46%)
+      Number used as logic LUTs:        1975
+      Number used as distributed RAM:   1536
+      Number used as ripple logic:      780
+      Number used as shift registers:     0
+   Number of PIO sites used: 17 + 4(JTAG) out of 207 (10%)
+   Number of block RAMs:  3 out of 48 (6%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : Yes
+   Security used :   No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCSLEWRATEA):  0 out of 6 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 2 (50%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+
+                                    Page 1
+
+
+
+
+Design:  Bus_Interface_Top                             Date:  05/05/26  14:54:26
+
+Design Summary (cont)
+---------------------
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  3
+     Net OSC_Out: 9 loads, 9 rising, 0 falling (Driver: Int_OSC )
+     Net clk: 1203 loads, 1203 rising, 0 falling (Driver: PLL_1/PLLInst_0 )
+     Net ADC_SCLK_c: 245 loads, 244 rising, 1 falling (Driver:
+     ADC_Int1/clk_SPI_437 )
+   Number of Clock Enables:  78
+     Net clk_enable_339: 8 loads, 8 LSLICEs
+     Net clk_enable_354: 9 loads, 9 LSLICEs
+     Net clk_enable_368: 8 loads, 8 LSLICEs
+     Net clk_enable_398: 16 loads, 16 LSLICEs
+     Net clk_enable_430: 17 loads, 17 LSLICEs
+     Net clk_enable_461: 17 loads, 17 LSLICEs
+     Net clk_enable_476: 8 loads, 8 LSLICEs
+     Net clk_enable_491: 8 loads, 8 LSLICEs
+     Net clk_enable_514: 9 loads, 9 LSLICEs
+     Net LD_DataIn_adj_4734: 2 loads, 2 LSLICEs
+     Net PI_Buck1/clk_enable_668: 9 loads, 9 LSLICEs
+     Net clk_enable_675: 5 loads, 5 LSLICEs
+     Net clk_enable_691: 9 loads, 9 LSLICEs
+     Net clk_enable_706: 8 loads, 8 LSLICEs
+     Net OSC_Out_enable_8: 5 loads, 5 LSLICEs
+     Net ADC_SCLK_c_enable_380: 5 loads, 5 LSLICEs
+     Net clk_enable_586: 5 loads, 5 LSLICEs
+     Net clk_enable_633: 9 loads, 9 LSLICEs
+     Net clk_enable_648: 9 loads, 9 LSLICEs
+     Net ADC_SCLK_c_enable_181: 31 loads, 31 LSLICEs
+     Net ADC_Int1/ADC_SCLK_c_enable_48: 6 loads, 6 LSLICEs
+     Net ADC_Int1/ADC_SCLK_c_enable_89: 6 loads, 6 LSLICEs
+     Net ADC_Int1/ADC_SCLK_c_enable_100: 6 loads, 6 LSLICEs
+     Net ADC_Int1/ADC_SCLK_c_enable_111: 6 loads, 6 LSLICEs
+     Net ADC_Int1/ADC_SCLK_c_enable_122: 6 loads, 6 LSLICEs
+     Net ADC_Int1/ADC_SCLK_c_enable_133: 6 loads, 6 LSLICEs
+     Net ADC_Int1/ADC_SCLK_c_enable_144: 6 loads, 6 LSLICEs
+     Net ADC_Int1/ADC_SCLK_c_enable_155: 6 loads, 6 LSLICEs
+     Net ADC_Int1/ADC_SCLK_c_enable_301: 25 loads, 25 LSLICEs
+     Net ADC_Int1/ADC_SCLK_c_enable_358: 5 loads, 5 LSLICEs
+     Net ADC_Int1/ADC_SCLK_c_enable_373: 9 loads, 9 LSLICEs
+     Net ADC_Int1/ADC_SCLK_c_enable_273: 8 loads, 8 LSLICEs
+     Net ADC_SCLK_c_enable_231: 28 loads, 28 LSLICEs
+     Net ADC_SCLK_c_enable_259: 15 loads, 15 LSLICEs
+     Net ADC_Int1/ADC_SCLK_c_enable_390: 5 loads, 5 LSLICEs
+     Net ADC_Int1/ADC_SCLK_c_enable_351: 25 loads, 25 LSLICEs
+     Net ADC_Int1/ADC_Ave_Ld: 10 loads, 10 LSLICEs
+     Net ADC_Int1/SPI_PS/ADC_SCLK_c_enable_395: 9 loads, 9 LSLICEs
+     Net clk_enable_652: 20 loads, 20 LSLICEs
+     Net RS232_Usr/clk_enable_78: 4 loads, 4 LSLICEs
+     Net RS232_Usr/clk_enable_57: 8 loads, 8 LSLICEs
+     Net RS232_Usr/clk_enable_142: 4 loads, 4 LSLICEs
+     Net RS232_Usr/clk_enable_137: 4 loads, 4 LSLICEs
+     Net RS232_Usr/clk_enable_130: 4 loads, 4 LSLICEs
+     Net RS232_Usr/clk_enable_123: 4 loads, 4 LSLICEs
+     Net RS232_Usr/clk_enable_116: 4 loads, 4 LSLICEs
+     Net RS232_Usr/clk_enable_109: 4 loads, 4 LSLICEs
+
+                                    Page 2
+
+
+
+
+Design:  Bus_Interface_Top                             Date:  05/05/26  14:54:26
+
+Design Summary (cont)
+---------------------
+     Net RS232_Usr/clk_enable_102: 5 loads, 5 LSLICEs
+     Net RS232_Usr/clk_enable_95: 5 loads, 5 LSLICEs
+     Net RS232_Usr/clk_enable_86: 4 loads, 4 LSLICEs
+     Net RS232_Usr/clk_enable_182: 17 loads, 17 LSLICEs
+     Net RS232_Usr/clk_enable_16: 1 loads, 1 LSLICEs
+     Net RS232_Usr/clk_enable_279: 8 loads, 8 LSLICEs
+     Net RS232_Usr/clk_enable_618: 6 loads, 6 LSLICEs
+     Net RS232_Usr/clk_enable_723: 4 loads, 4 LSLICEs
+     Net RS232_Usr/clk_enable_551: 5 loads, 5 LSLICEs
+     Net clk_enable_601: 8 loads, 8 LSLICEs
+     Net clk_enable_725: 3 loads, 3 LSLICEs
+     Net clk_enable_579: 3 loads, 3 LSLICEs
+     Net clk_enable_575: 8 loads, 8 LSLICEs
+     Net RS232_Usr/clk_enable_560: 14 loads, 14 LSLICEs
+     Net RS232_Usr/Looped_adj_4578: 1 loads, 1 LSLICEs
+     Net RS232_Usr/clk_enable_324: 5 loads, 5 LSLICEs
+     Net RS232_Usr/clk_enable_316: 8 loads, 8 LSLICEs
+     Net clk_enable_249: 8 loads, 8 LSLICEs
+     Net clk_enable_234: 8 loads, 8 LSLICEs
+     Net clk_enable_197: 8 loads, 8 LSLICEs
+     Net clk_enable_219: 8 loads, 8 LSLICEs
+     Net RS232_Usr/clk_enable_710: 1 loads, 1 LSLICEs
+     Net clk_enable_728: 19 loads, 19 LSLICEs
+     Net clk_enable_264: 8 loads, 8 LSLICEs
+     Net RS232_Usr/clk_enable_499: 5 loads, 5 LSLICEs
+     Net RS232_Usr/STD_FIFO_W/clk_enable_521: 4 loads, 4 LSLICEs
+     Net RS232_Usr/STD_FIFO_W/clk_enable_711: 1 loads, 1 LSLICEs
+     Net RS232_Usr/STD_FIFO_R/clk_enable_286: 4 loads, 4 LSLICEs
+     Net RS232_Usr/STD_FIFO_R/clk_enable_66: 1 loads, 1 LSLICEs
+     Net RS232_Usr/STD_FIFO_R/clk_enable_654: 1 loads, 1 LSLICEs
+     Net clk_enable_543: 5 loads, 5 LSLICEs
+   Number of local set/reset loads for net BM/Mem1_rst merged into GSR:  16
+   Number of LSRs:  27
+     Net Reset_Cnt_rst: 5 loads, 5 LSLICEs
+     Net n7655: 10 loads, 10 LSLICEs
+     Net PI_Buck1/n7677: 9 loads, 9 LSLICEs
+     Net System_rst: 576 loads, 576 LSLICEs
+     Net n7577: 5 loads, 5 LSLICEs
+     Net n7671: 14 loads, 14 LSLICEs
+     Net rst_N_3722: 18 loads, 18 LSLICEs
+     Net ADC_Mem_Temp_15__15__N_3105: 74 loads, 74 LSLICEs
+     Net ADC_Int1/n26932: 5 loads, 5 LSLICEs
+     Net ADC_Int1/n7579: 9 loads, 9 LSLICEs
+     Net ADC_Int1/n26827: 16 loads, 16 LSLICEs
+     Net ADC_Int1/n7575: 5 loads, 5 LSLICEs
+     Net RS232_Usr/n26925: 12 loads, 12 LSLICEs
+     Net RS232_Usr/n26923: 19 loads, 19 LSLICEs
+     Net RS232_Usr/n12937: 1 loads, 1 LSLICEs
+     Net RS232_Usr/n12809: 1 loads, 1 LSLICEs
+     Net RS232_Usr/Rcv_Cnt_rst: 5 loads, 5 LSLICEs
+     Net RS232_Usr/n31: 1 loads, 1 LSLICEs
+     Net RS232_Usr/i_15__N_850: 2 loads, 2 LSLICEs
+     Net RS232_Usr/n12918: 9 loads, 9 LSLICEs
+     Net RS232_Usr/STD_FIFO_R/n8970: 1 loads, 1 LSLICEs
+     Net LED_Ctrll/NS_PWM2_4__N_1279: 9 loads, 9 LSLICEs
+     Net LED_Ctrll/CS_PWM1_4__N_1532: 12 loads, 12 LSLICEs
+
+                                    Page 3
+
+
+
+
+Design:  Bus_Interface_Top                             Date:  05/05/26  14:54:26
+
+Design Summary (cont)
+---------------------
+     Net LED_Ctrll/NS_PWM1_4__N_1261: 9 loads, 9 LSLICEs
+     Net LED_Ctrll/NS_PWM4_4__N_1315: 9 loads, 9 LSLICEs
+     Net LED_Ctrll/NS_PWM3_4__N_1297: 9 loads, 9 LSLICEs
+     Net LED_Ctrll/n7640: 9 loads, 9 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net System_rst: 689 loads
+     Net BM/Mem1_addra_4: 576 loads
+     Net BM/Mem1_addra_0: 490 loads
+     Net BM/Mem1_addra_1: 490 loads
+     Net BM/Mem1_addra_2: 490 loads
+     Net BM/Mem1_addra_3: 490 loads
+     Net BM/n27803: 490 loads
+     Net BM/n27805: 490 loads
+     Net BM/n27807: 490 loads
+     Net BM/n27809: 490 loads
+
+
+
+
+   Number of warnings:  1
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: Using local reset signal 'BM/Mem1_rst' to infer global GSR net.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| ADC_DOUT            | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SCI_RX              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| DSP_G2              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| DSP_G1              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ADC_CSn             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ADC_DIN             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ADC_SCLK            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| PWM_Test_Out        | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| LED_8               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| LED_7               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 4
+
+
+
+
+Design:  Bus_Interface_Top                             Date:  05/05/26  14:54:26
+
+IO (PIO) Attributes (cont)
+--------------------------
+| LED_6               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| LED_5               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| LED_4               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| LED_3               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| LED_2               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| LED_1               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SCI_TX              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Signal RS232_Usr/n7648 was merged into signal RS232_Usr/Rcv_Cnt_rst
+Signal ADC_Int1/SPI_Sclk_N_3652 was merged into signal ADC_SCLK_c
+Signal n7581 was merged into signal Reset_Cnt_rst
+Signal LED_Ctrll/Bus_Cnt/add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/Bus_Cnt/add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/Bus_Cnt/add_4_17/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/Bus_Cnt/add_4_17/CO undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/Delay_Cnt/add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/Delay_Cnt/add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/Delay_Cnt/add_4_9/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/Delay_Cnt/add_4_9/CO undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/PWM1_Cnt/temp_2927_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal LED_Ctrll/PWM1_Cnt/temp_2927_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal LED_Ctrll/PWM1_Cnt/temp_2927_add_4_17/S1 undriven or does not drive
+     anything - clipped.
+Signal LED_Ctrll/PWM1_Cnt/temp_2927_add_4_17/CO undriven or does not drive
+     anything - clipped.
+Signal LED_Ctrll/PWM2_Cnt/temp_2928_add_4_17/S1 undriven or does not drive
+     anything - clipped.
+Signal LED_Ctrll/PWM2_Cnt/temp_2928_add_4_17/CO undriven or does not drive
+     anything - clipped.
+Signal LED_Ctrll/PWM2_Cnt/temp_2928_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal LED_Ctrll/PWM2_Cnt/temp_2928_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal LED_Ctrll/PWM3_Cnt/temp_2929_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal LED_Ctrll/PWM3_Cnt/temp_2929_add_4_1/CI undriven or does not drive
+
+                                    Page 5
+
+
+
+
+Design:  Bus_Interface_Top                             Date:  05/05/26  14:54:26
+
+Removed logic (cont)
+--------------------
+     anything - clipped.
+Signal LED_Ctrll/PWM3_Cnt/temp_2929_add_4_17/S1 undriven or does not drive
+     anything - clipped.
+Signal LED_Ctrll/PWM3_Cnt/temp_2929_add_4_17/CO undriven or does not drive
+     anything - clipped.
+Signal LED_Ctrll/PWM4_Cnt/temp_2930_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal LED_Ctrll/PWM4_Cnt/temp_2930_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal LED_Ctrll/PWM4_Cnt/temp_2930_add_4_17/S1 undriven or does not drive
+     anything - clipped.
+Signal LED_Ctrll/PWM4_Cnt/temp_2930_add_4_17/CO undriven or does not drive
+     anything - clipped.
+Signal LED_Ctrll/sub_2684_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2684_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2684_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2684_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2684_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2684_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2684_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2684_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2684_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2684_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2684_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2684_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2684_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2684_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2684_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2684_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2684_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2684_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2684_add_2_17/CO undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_1/CI undriven or does not drive anything -
+
+                                    Page 6
+
+
+
+
+Design:  Bus_Interface_Top                             Date:  05/05/26  14:54:26
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2690_add_2_17/CO undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_11/S1 undriven or does not drive anything -
+
+                                    Page 7
+
+
+
+
+Design:  Bus_Interface_Top                             Date:  05/05/26  14:54:26
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2686_add_2_17/CO undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal LED_Ctrll/sub_2688_add_2_17/CO undriven or does not drive anything -
+     clipped.
+Signal Reset_Cnt/add_4_1/S0 undriven or does not drive anything - clipped.
+Signal Reset_Cnt/add_4_1/CI undriven or does not drive anything - clipped.
+Signal Reset_Cnt/add_4_9/S1 undriven or does not drive anything - clipped.
+
+                                    Page 8
+
+
+
+
+Design:  Bus_Interface_Top                             Date:  05/05/26  14:54:26
+
+Removed logic (cont)
+--------------------
+Signal Reset_Cnt/add_4_9/CO undriven or does not drive anything - clipped.
+Signal RS232_Usr/Rcv_Cnt/add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/Rcv_Cnt/add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/Rcv_Cnt/add_4_9/S1 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/Rcv_Cnt/add_4_9/CO undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/STD_FIFO_R/equal_3311_8/S1 undriven or does not drive anything
+     - clipped.
+Signal RS232_Usr/STD_FIFO_R/equal_3311_8/S0 undriven or does not drive anything
+     - clipped.
+Signal RS232_Usr/STD_FIFO_R/equal_3311_9/S0 undriven or does not drive anything
+     - clipped.
+Signal RS232_Usr/STD_FIFO_R/equal_3311_9/CO undriven or does not drive anything
+     - clipped.
+Signal RS232_Usr/STD_FIFO_R/Head_8__I_0_68_0/S1 undriven or does not drive
+     anything - clipped.
+Signal RS232_Usr/STD_FIFO_R/Head_8__I_0_68_0/S0 undriven or does not drive
+     anything - clipped.
+Signal RS232_Usr/STD_FIFO_R/Head_8__I_0_68_0/CI undriven or does not drive
+     anything - clipped.
+Signal RS232_Usr/STD_FIFO_R/Head_8__I_0_68_8/S1 undriven or does not drive
+     anything - clipped.
+Signal RS232_Usr/STD_FIFO_R/Head_8__I_0_68_8/S0 undriven or does not drive
+     anything - clipped.
+Signal RS232_Usr/STD_FIFO_R/Head_8__I_0_68_9/S0 undriven or does not drive
+     anything - clipped.
+Signal RS232_Usr/STD_FIFO_R/Head_8__I_0_68_9/CO undriven or does not drive
+     anything - clipped.
+Signal RS232_Usr/STD_FIFO_R/equal_3311_0/S1 undriven or does not drive anything
+     - clipped.
+Signal RS232_Usr/STD_FIFO_R/equal_3311_0/S0 undriven or does not drive anything
+     - clipped.
+Signal RS232_Usr/STD_FIFO_R/equal_3311_0/CI undriven or does not drive anything
+     - clipped.
+Signal RS232_Usr/STD_FIFO_R/add_11_1/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/STD_FIFO_R/add_11_1/CI undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/STD_FIFO_R/add_11_9/CO undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/STD_FIFO_R/add_25_1/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/STD_FIFO_R/add_25_1/CI undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/STD_FIFO_R/add_25_9/CO undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/STD_FIFO_W/equal_3340_8/S1 undriven or does not drive anything
+     - clipped.
+Signal RS232_Usr/STD_FIFO_W/equal_3340_8/S0 undriven or does not drive anything
+     - clipped.
+Signal RS232_Usr/STD_FIFO_W/equal_3340_9/S0 undriven or does not drive anything
+     - clipped.
+Signal RS232_Usr/STD_FIFO_W/equal_3340_9/CO undriven or does not drive anything
+
+                                    Page 9
+
+
+
+
+Design:  Bus_Interface_Top                             Date:  05/05/26  14:54:26
+
+Removed logic (cont)
+--------------------
+     - clipped.
+Signal RS232_Usr/STD_FIFO_W/Head_8__I_0_68_0/S1 undriven or does not drive
+     anything - clipped.
+Signal RS232_Usr/STD_FIFO_W/Head_8__I_0_68_0/S0 undriven or does not drive
+     anything - clipped.
+Signal RS232_Usr/STD_FIFO_W/Head_8__I_0_68_0/CI undriven or does not drive
+     anything - clipped.
+Signal RS232_Usr/STD_FIFO_W/add_11_1/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/STD_FIFO_W/add_11_1/CI undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/STD_FIFO_W/add_11_9/CO undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/STD_FIFO_W/add_25_1/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/STD_FIFO_W/add_25_1/CI undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/STD_FIFO_W/add_25_9/CO undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/STD_FIFO_W/Head_8__I_0_68_8/S1 undriven or does not drive
+     anything - clipped.
+Signal RS232_Usr/STD_FIFO_W/Head_8__I_0_68_8/S0 undriven or does not drive
+     anything - clipped.
+Signal RS232_Usr/STD_FIFO_W/Head_8__I_0_68_9/S0 undriven or does not drive
+     anything - clipped.
+Signal RS232_Usr/STD_FIFO_W/Head_8__I_0_68_9/CO undriven or does not drive
+     anything - clipped.
+Signal RS232_Usr/STD_FIFO_W/equal_3340_0/S1 undriven or does not drive anything
+     - clipped.
+Signal RS232_Usr/STD_FIFO_W/equal_3340_0/S0 undriven or does not drive anything
+     - clipped.
+Signal RS232_Usr/STD_FIFO_W/equal_3340_0/CI undriven or does not drive anything
+     - clipped.
+Signal RS232_Usr/NS_FIFO_Bus_5__I_11_0/S1 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/NS_FIFO_Bus_5__I_11_0/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/NS_FIFO_Bus_5__I_11_0/CI undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/add_205_17/S1 undriven or does not drive anything - clipped.
+Signal RS232_Usr/add_205_17/CO undriven or does not drive anything - clipped.
+Signal RS232_Usr/sub_2682_add_2_18/S1 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_18/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/add_217_1/S0 undriven or does not drive anything - clipped.
+Signal RS232_Usr/add_217_1/CI undriven or does not drive anything - clipped.
+Signal RS232_Usr/sub_2682_add_2_20/S1 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_20/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_22/S1 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_22/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_24/S1 undriven or does not drive anything -
+
+                                   Page 10
+
+
+
+
+Design:  Bus_Interface_Top                             Date:  05/05/26  14:54:26
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_24/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_26/S1 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_26/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/add_217_17/S1 undriven or does not drive anything - clipped.
+Signal RS232_Usr/add_217_17/CO undriven or does not drive anything - clipped.
+Signal RS232_Usr/add_238_1/S0 undriven or does not drive anything - clipped.
+Signal RS232_Usr/add_238_1/CI undriven or does not drive anything - clipped.
+Signal RS232_Usr/NS_FIFO_Bus_5__I_11_7/S1 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/NS_FIFO_Bus_5__I_11_7/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_28/S1 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_28/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/add_2920_1/S1 undriven or does not drive anything - clipped.
+Signal RS232_Usr/add_2920_1/S0 undriven or does not drive anything - clipped.
+Signal RS232_Usr/add_2920_1/CI undriven or does not drive anything - clipped.
+Signal RS232_Usr/sub_2682_add_2_30/S1 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_30/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/add_2920_9/CO undriven or does not drive anything - clipped.
+Signal RS232_Usr/NS_FIFO_Bus_5__I_11_8/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/NS_FIFO_Bus_5__I_11_8/CO undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_32/S1 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_32/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_cout/S1 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_cout/CO undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/add_3831_2/S0 undriven or does not drive anything - clipped.
+Signal RS232_Usr/add_3831_2/CI undriven or does not drive anything - clipped.
+Signal RS232_Usr/add_3831_10/CO undriven or does not drive anything - clipped.
+Signal RS232_Usr/add_238_33/S1 undriven or does not drive anything - clipped.
+Signal RS232_Usr/add_238_33/CO undriven or does not drive anything - clipped.
+Signal RS232_Usr/sub_2682_add_2_6/S1 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_6/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_8/S1 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_8/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/add_205_1/S0 undriven or does not drive anything - clipped.
+Signal RS232_Usr/add_205_1/CI undriven or does not drive anything - clipped.
+Signal RS232_Usr/sub_2682_add_2_10/S1 undriven or does not drive anything -
+     clipped.
+
+                                   Page 11
+
+
+
+
+Design:  Bus_Interface_Top                             Date:  05/05/26  14:54:26
+
+Removed logic (cont)
+--------------------
+Signal RS232_Usr/sub_2682_add_2_10/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_4/S1 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_4/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_12/S1 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_12/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_14/S1 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_14/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_16/S1 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_16/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_2/S1 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_2/S0 undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/sub_2682_add_2_2/CI undriven or does not drive anything -
+     clipped.
+Signal RS232_Usr/add_117_9/S1 undriven or does not drive anything - clipped.
+Signal RS232_Usr/add_117_9/CO undriven or does not drive anything - clipped.
+Signal RS232_Usr/add_117_1/S0 undriven or does not drive anything - clipped.
+Signal RS232_Usr/add_117_1/CI undriven or does not drive anything - clipped.
+Signal ADC_Int1/Ave_Cnt/add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/Ave_Cnt/add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/Ave_Cnt/add_4_9/S1 undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/Ave_Cnt/add_4_9/CO undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/Bus_Cnt/add_4_17/S1 undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/Bus_Cnt/add_4_17/CO undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/Bus_Cnt/add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/Bus_Cnt/add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/Mem_Cnt/add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/Mem_Cnt/add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/Mem_Cnt/add_4_9/S1 undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/Mem_Cnt/add_4_9/CO undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/Prg_Cnt/add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/Prg_Cnt/add_4_1/CI undriven or does not drive anything -
+     clipped.
+
+                                   Page 12
+
+
+
+
+Design:  Bus_Interface_Top                             Date:  05/05/26  14:54:26
+
+Removed logic (cont)
+--------------------
+Signal ADC_Int1/Prg_Cnt/add_4_9/S1 undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/Prg_Cnt/add_4_9/CO undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/SPI_Cnt/add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/SPI_Cnt/add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/SPI_Cnt/add_4_17/S1 undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/SPI_Cnt/add_4_17/CO undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/SPI_Loop_Cnt/add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/SPI_Loop_Cnt/add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/SPI_Loop_Cnt/add_4_17/S1 undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/SPI_Loop_Cnt/add_4_17/CO undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/Setup_Cnt/add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/Setup_Cnt/add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/Setup_Cnt/add_4_9/S1 undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/Setup_Cnt/add_4_9/CO undriven or does not drive anything -
+     clipped.
+Signal ADC_Int1/add_70_16/CO undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_63_2/S0 undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_63_2/CI undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_63_16/CO undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_64_2/S0 undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_64_2/CI undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_64_16/CO undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_65_2/S0 undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_65_2/CI undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_65_16/CO undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_66_2/S0 undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_66_2/CI undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_66_16/CO undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_67_2/S0 undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_67_2/CI undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_67_16/CO undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_68_2/S0 undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_68_2/CI undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_68_16/CO undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_69_2/S0 undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_69_2/CI undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_69_16/CO undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_70_2/S0 undriven or does not drive anything - clipped.
+Signal ADC_Int1/add_70_2/CI undriven or does not drive anything - clipped.
+Signal PI_Buck1/Bus_Cnt/add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal PI_Buck1/Bus_Cnt/add_4_1/CI undriven or does not drive anything -
+     clipped.
+
+                                   Page 13
+
+
+
+
+Design:  Bus_Interface_Top                             Date:  05/05/26  14:54:26
+
+Removed logic (cont)
+--------------------
+Signal PI_Buck1/Bus_Cnt/add_4_17/S1 undriven or does not drive anything -
+     clipped.
+Signal PI_Buck1/Bus_Cnt/add_4_17/CO undriven or does not drive anything -
+     clipped.
+Signal PI_Buck1/Delay_Cnt/add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal PI_Buck1/Delay_Cnt/add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal PI_Buck1/Delay_Cnt/add_4_9/S1 undriven or does not drive anything -
+     clipped.
+Signal PI_Buck1/Delay_Cnt/add_4_9/CO undriven or does not drive anything -
+     clipped.
+Signal PI_Buck1/Acc_reg_o_31__I_0_122_2/S0 undriven or does not drive anything -
+     clipped.
+Signal PI_Buck1/Acc_reg_o_31__I_0_122_2/CI undriven or does not drive anything -
+     clipped.
+Signal PI_Buck1/Acc_reg_o_31__I_0_122_32/CO undriven or does not drive anything
+     - clipped.
+Signal PI_Buck1/Acc_reg_o_31__I_0_2/S0 undriven or does not drive anything -
+     clipped.
+Signal PI_Buck1/Acc_reg_o_31__I_0_2/CI undriven or does not drive anything -
+     clipped.
+Signal PI_Buck1/sub_57_add_2_1/S0 undriven or does not drive anything - clipped.
+     
+Signal PI_Buck1/sub_57_add_2_1/CI undriven or does not drive anything - clipped.
+     
+Signal PI_Buck1/sub_57_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal PI_Buck1/sub_57_add_2_17/CO undriven or does not drive anything -
+     clipped.
+Signal PI_Buck1/Acc_reg_o_31__I_0_32/CO undriven or does not drive anything -
+     clipped.
+Signal PI_Buck1/add_15422_1/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_1/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_1/CI undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_3/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_3/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_5/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_5/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_7/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_7/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_9/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_9/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_11/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_11/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_13/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_13/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_15/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_15/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_17/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_17/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_19/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_19/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_21/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_21/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_23/S1 undriven or does not drive anything - clipped.
+
+                                   Page 14
+
+
+
+
+Design:  Bus_Interface_Top                             Date:  05/05/26  14:54:26
+
+Removed logic (cont)
+--------------------
+Signal PI_Buck1/add_15422_23/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_25/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_25/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_27/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_27/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_29/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_29/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_31/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_31/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15422_cout/S1 undriven or does not drive anything - clipped.
+     
+Signal PI_Buck1/add_15422_cout/CO undriven or does not drive anything - clipped.
+     
+Signal PI_Buck1/add_15421_1/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15421_1/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15421_1/CI undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15421_3/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15421_3/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15421_5/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15421_5/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15421_7/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15421_7/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15421_9/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15421_9/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15421_11/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15421_11/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15421_13/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15421_13/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15421_15/S1 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15421_15/S0 undriven or does not drive anything - clipped.
+Signal PI_Buck1/add_15421_cout/S1 undriven or does not drive anything - clipped.
+     
+Signal PI_Buck1/add_15421_cout/CO undriven or does not drive anything - clipped.
+     
+Block RS232_Usr/i3039_1_lut was optimized away.
+Block ADC_Int1/i21668 was optimized away.
+Block i3030_1_lut was optimized away.
+
+Memory Usage
+------------
+
+/BM/Mem1:
+    EBRs: 0
+    RAM SLICEs: 768
+    Logic SLICEs: 16
+    PFU Registers: 276
+/RS232_Usr:
+    EBRs: 1
+    RAM SLICEs: 0
+    Logic SLICEs: 326
+    PFU Registers: 262
+    -Contains EBR RAM0:  TYPE= SP8KC,  Width= 8,  Depth= 256,  REGMODE= NOREG,
+         RESETMODE= SYNC,  ASYNC_RESET_RELEASE= SYNC,  WRITEMODE=
+         READBEFOREWRITE,  GSR= DISABLED
+/RS232_Usr/STD_FIFO_R:
+    EBRs: 1
+
+                                   Page 15
+
+
+
+
+Design:  Bus_Interface_Top                             Date:  05/05/26  14:54:26
+
+Memory Usage (cont)
+-------------------
+    RAM SLICEs: 0
+    Logic SLICEs: 27
+    PFU Registers: 44
+    -Contains EBR Memory0:  TYPE= DP8KC,  Width_B= 8,  Depth_A= 512,  Depth_B=
+         512,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+/RS232_Usr/STD_FIFO_W:
+    EBRs: 1
+    RAM SLICEs: 0
+    Logic SLICEs: 25
+    PFU Registers: 29
+    -Contains EBR Memory0:  TYPE= DP8KC,  Width_B= 8,  Depth_A= 512,  Depth_B=
+         512,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+
+     
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                PLL_1/PLLInst_0
+  PLL Type:                                         EHXPLLJ
+  Input Clock:                             NODE     OSC_Out
+  Output Clock(P):                         NODE     clk
+  Output Clock(S):                                  NONE
+  Output Clock(S2):                                 NONE
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     clk
+  Reset Signal:                                     NONE
+  M Divider Reset Signal:                           NONE
+  C Divider Reset Signal:                           NONE
+  D Divider Reset Signal:                           NONE
+  Standby Signal:                                   NONE
+  PLL LOCK signal:                         NODE     PLL_Lock
+  PLL Data bus CLK Signal:                          NONE
+  PLL Data bus Strobe Signal:                       NONE
+  PLL Data bus Reset Signal:                        NONE
+  PLL Data bus Write Enable Signal:                 NONE
+  PLL Data bus Address0:                            NONE
+  PLL Data bus Address1:                            NONE
+  PLL Data bus Address2:                            NONE
+  PLL Data bus Address3:                            NONE
+  PLL Data bus Address4:                            NONE
+  PLL Data In bus Data0:                            NONE
+  PLL Data In bus Data1:                            NONE
+  PLL Data In bus Data2:                            NONE
+  PLL Data In bus Data3:                            NONE
+  PLL Data In bus Data4:                            NONE
+  PLL Data In bus Data5:                            NONE
+  PLL Data In bus Data6:                            NONE
+  PLL Data In bus Data7:                            NONE
+  PLL Data bus Acknowledge:                         NONE
+  PLL Data Out bus Data0:                           NONE
+
+                                   Page 16
+
+
+
+
+Design:  Bus_Interface_Top                             Date:  05/05/26  14:54:26
+
+PLL/DLL Summary (cont)
+----------------------
+  PLL Data Out bus Data1:                           NONE
+  PLL Data Out bus Data2:                           NONE
+  PLL Data Out bus Data3:                           NONE
+  PLL Data Out bus Data4:                           NONE
+  PLL Data Out bus Data5:                           NONE
+  PLL Data Out bus Data6:                           NONE
+  PLL Data Out bus Data7:                           NONE
+  Input Clock Frequency (MHz):                       8.3100
+  Output Clock(P) Frequency (MHz):                  24.9300
+  Output Clock(S) Frequency (MHz):                  NA
+  Output Clock(S2) Frequency (MHz):                 NA
+  Output Clock(S3) Frequency (MHz):                 NA
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              VCO_PHASE
+  Pre Divider B Input:                              VCO_PHASE
+  Pre Divider C Input:                              VCO_PHASE
+  Pre Divider D Input:                              VCO_PHASE
+  VCO Bypass A Input:                               VCO_PHASE
+  VCO Bypass B Input:                               VCO_PHASE
+  VCO Bypass C Input:                               VCO_PHASE
+  VCO Bypass D Input:                               VCO_PHASE
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     1
+  CLKFB Divider:                                    3
+  CLKOP Divider:                                    21
+  CLKOS Divider:                                    1
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+  Fractional N Divider:                             0
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 RISING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 FALLING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS3 Desired Phase Shift(degree):               0
+
+ASIC Components
+---------------
+
+Instance Name: Int_OSC
+         Type: OSCJ
+Instance Name: PLL_1/PLLInst_0
+         Type: EHXPLLJ
+Instance Name: RS232_Usr/RAM0
+         Type: SP8KC
+Instance Name: RS232_Usr/STD_FIFO_W/Memory0
+         Type: DP8KC
+Instance Name: RS232_Usr/STD_FIFO_R/Memory0
+         Type: DP8KC
+
+
+
+                                   Page 17
+
+
+
+
+Design:  Bus_Interface_Top                             Date:  05/05/26  14:54:26
+
+GSR Usage
+---------
+
+GSR Component:
+   The local reset signal 'BM/Mem1_rst' of the design has been inferred as
+        Global Set Reset (GSR). The reset signal used for GSR control is
+        'BM/Mem1_rst'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 2 secs  
+   Total REAL Time: 3 secs  
+   Peak Memory Usage: 103 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   Page 18
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights
+     reserved.
